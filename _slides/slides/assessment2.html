@@ -1,0 +1,698 @@
+---
+layout: presentation
+title: Assessment 2  --Week 3--
+description: Comparison of Assessment Approaches
+class: middle, center, inverse
+---
+background-image: url(img/people.png)
+
+.left-column50[
+# Week 3: More Assessment!
+
+{{site.classnum}}, {{site.quarter}}
+]
+---
+name: normal
+layout: true
+class:
+
+---
+# Important Reminder
+
+.left-column[
+![:qrhere](nil)]
+
+## Make sure zoom is running and recording!!!
+## Check on zoom buddies
+## Make sure captioning is turned on
+
+---
+[//]: # (Outline Slide)
+# Learning Goals for Today
+
+- Remainder of POUR: accessibility standards (2 and 3 and 4)
+- More on how to assess websites / implement changes
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.1 (1/5)
+Keyboard Accessible
+]
+.right-column[
+
+Keyboards are uniquely flexible & pretty universal 
+
+Keyboards are operable  by people with most disabilities
+
+Examples of who benefits
+- screen reader users (e.g. blind users, reading disabilities)
+- speech input users
+- switch input users
+]
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.1 (2/5)
+Keyboard Accessible
+]
+.right-column[
+But we need to think about keyboard accessibility when using all apps
+- Drawing program
+- Drag and Drop
+- Drone control
+- Game play
+- Website navigation 
+- ...
+]
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.1 (3/5)
+Keyboard Accessible
+]
+.right-column[
+Some common pitfalls:
+
+- Keyboard Traps. 
+  - "Trap" keyboard focus within areas of a page
+  - Occurs when multiple formats are combined  using plug-ins/embedded applications.
+]
+
+???
+Problem if you are using tab to navigate (for example)
+
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.1 (4/5) 
+Keyboard Accessible
+]
+.right-column[
+Some common pitfalls:
+
+- Keyboard Traps.
+- Invisible Content. Some parts of a web page can never be reached
+]
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.1 (5/5) 
+Keyboard Accessible
+]
+.right-column[
+Some common pitfalls:
+
+- Keyboard Traps.
+- Invisible Content. Some parts of a web page can never be reached
+- Lack of Control. Users should be able to reconfigure or remove shortcuts
+]
+
+???
+Note: Not in guidelines (that I know of) but a "reverse trap" is whether you can reach text that *doesn't* have links or headers when using switch input. How would you do this?
+
+Character key shortcuts work well for many keyboard users, but are inappropriate and frustrating for speech input users — whose means of input is strings of letters — and for keyboard users who are prone to accidentally hit keys. To rectify this issue, authors need to allow users to turn off or reconfigure shortcuts that are made up of only character keys.
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.2 (1/2)
+
+Enough Time
+]
+.right-column[
+Timed content includes rotating content; timeouts; etc
+
+Many users who have disabilities may need more time to complete tasks
+- To physically respond
+- To read things
+- To find things (e.g. due to low vision)
+- To accessing content through an assistive technology (e.g. single switch)
+]
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.2 (2/2)
+
+Enough Time
+]
+.right-column[
+- Make timelines adjustable if necessary
+   - Able to resume after timeout without data loss
+- Warn users about time limits
+- Provide controls (Pause, Stop & Hide) for blinking text and animations 
+- Let users postpone or suppress interruptions 
+- Interruptions involving an emergency still appear (AAA)
+]
+
+---
+exclude: true
+
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.3 (1/2)
+
+Seizures and Physical Reactions
+]
+.right-column[
+In 1997, a cartoon on television in Japan sent over 700 children to the hospital, including about 500 who had seizures.
+ - Most people are unaware that they are triggered until it strikes. 
+ - Warnings do not work well because they are often missed, especially by children who may in fact not be able to read them.
+]
+
+???
+It is possible to avoid these types of flashes and still create appealing apps/websites
+
+
+---
+exclude: true
+
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.3 (2/2)
+
+Seizures and Physical Reactions
+]
+.right-column[
+-  Web pages do not contain anything that flashes more than three times in any one second period
+- Motion animation triggered by interaction can be disabled, unless the animation is essential to the functionality or the information being conveyed (AAA)
+]
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.4 (1/5)
+
+Navigable
+]
+.right-column[
+Can the user
+
+- Orient themselves within the overall app
+- Find the content they need
+- Go somewhere they want to go?
+- Keep track of their location?
+
+Connections: Guideline 1.3 (Structure can be perceived);  1.3.1 (Use headings)
+]
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.4  (2/5)
+
+Navigable
+]
+.right-column[
+- Can orient oneself & find content
+- Can jump over uninteresting content
+]
+???
+examples: Navigation (that is the same on every page on a site); Anything that is not the news article (on a news site); Advertisements; etc. 
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.4 (3/5)
+
+Navigable
+]
+.right-column[
+- Can orient oneself & find content
+- Can jump over uninteresting content
+- Titles, links & headings descriptive 
+   - Each page has descriptive title
+   - Links have informative link text
+   - Headings and labels 
+      - Describe topic and purpose
+	  - Have meaningful heading levels
+	  - Are not used solely for styling (styling is handled through CSS)
+   
+]
+---
+
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.4 (4/5)
+
+Navigable
+]
+.right-column[
+- Can orient oneself & find content
+- Can jump over uninteresting content
+- Titles, links & Headings descriptive
+- Focus is usable
+   - Focus order makes sense. 
+   - This can be problematic in any web page
+   - Requires special support when navigating trees and tables.
+   - Focus is visible (A); perceivable (AA) & obscured by other content (A)
+]
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.5 (1/5)
+
+Pointers alone should  be able to access everything
+]
+.right-column[
+
+- All functionality should be accessible via pointers
+- Don't require timed or complex gestures. Examples 
+  - drag-and-drop gestures and on touch screens
+  - swiping gestures
+  - split taps
+  - long presses
+  - multi-finger gestures
+  - tilting based interactions
+]
+
+
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.5 (1/5)
+
+Pointers alone should  be able to access everything
+]
+.right-column[
+
+- All functionality should be accessible via pointers
+- Don't require timed or complex gestures. Examples 
+- Don't require selecting small targets, or high precision (i.e. due to tremor)
+  - 24x24 CSS Pixels (AA) 
+  - 44x44 CSS Pixels (AAA)
+  - 48x48 (Mobile)
+]
+
+
+---
+# More on Size
+
+.left-column40[
+Especially hard on mobile devices
+
+![:img An arrow vs arrow and label make very different target sizes ,80%, width](img/assessment/targets.png) 
+]
+
+.right-column60[
+Can make targets larger than their visual error
+- Reduces errors
+- Still intuitive 
+- White space around targets also helps
+]
+???
+Solve for one, extend to many
+Trying to hit a small button with one hand while standing on a moving, crowded bus
+
+---
+exclude: true
+
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.5 (2/5)
+
+Pointers alone able to access everything
+]
+.right-column[
+- Support a variety of input options
+   - avoid path based gestures when possible; 
+   - offer alternatives to path based gestures or multi-finger gestures
+   - provide programmatic alternatives to shaking or tilting or dragging based interaction
+   - **overall goal**: allow users to use multiple possible types of input (keyboard, pointer, on-screen keyboard, stylus, etc)
+
+]
+
+???
+
+including a single pointer; offer alternatives to gestures and other physical actions
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.5 (3/5)
+
+Pointers alone should be able to access everything
+]
+.right-column[
+- All functionality should be accessible via pointers
+- Don't require timed or complex gestures
+- Trigger content only on *up* events (after a complete click)
+]
+---
+# POUR: Operable: Guidelines 2.1-2.5
+
+.left-column[
+## Guideline 2.5 (4/5)
+
+Pointers alone should be able to access everything
+]
+.right-column[
+- All functionality should be accessible via pointers
+- Don't require timed or complex gestures
+- Trigger content only on *up* events (after a complete click)
+- Match the  **accessible name** and **visual name** of components
+  - better supports programmatic access provided by accessibility tools. 
+]
+
+---
+# Finding 2.1-2.5 Violations
+
+- 2.1 Keyboard Accessible
+- 2.2 Enough Time
+- 2.4 Navigable
+- 2.5 Pointers alone should  be able to access everything
+
+How would you check each of these in WebAIM? Using Accessibility Technology? 
+([post]({{site.discussion}}/5428437))
+
+---
+# QUICK BREAK
+
+Good time to stand and stretch
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.1 (1/4)
+Readable
+]
+.right-column[
+Support all reading disabilities/reading modality preferences
+- Access tools can access all text content
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.1 (2/4)
+Readable
+]
+.right-column[
+- Access tools can access all text content
+- Provide meta data on language
+ - Including parts of a page if the language switches). 
+ - Also provide pronunciation information when needed to read aloud properly
+
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.1 (3/4)
+Readable
+]
+.right-column[
+- Access tools can access all text content
+- Provide meta data language
+- Provide a dictionary
+   - Easy to find & well organized 
+   - Include jargon, abbreviations, and other unusual words
+
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.1 (4/4)
+Readable
+]
+.right-column[
+- Access tools can access all text content
+- Provide meta data language
+- Provide a dictionary
+- Aim for clarity & simplicity
+   - Use clear and simple language at an appropriate reading level
+   - If not possible, include  clear and simple summaries. 
+   - If possible provide an audio or sign language version of content
+
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.2 (1/4)
+
+Predictable
+]
+.right-column[
+Present content in a predictable and consistent order
+- Can help screen reader users
+- Can help people with cognitive impairments
+- Can help people who use magnification and can only see part of a layout
+]
+
+
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.2 (2/4)
+
+Predictable
+]
+.right-column[
+- Present content in a predictable and consistent order
+- Focus alone shouldn't trigger events
+  - e.g. submit a form; launch a dialog; change layout
+  - instead provide a button (e.g. "update now"; "submit")
+  - same for page elements or inputs. 
+  - Describe what will happen before a change to a form control. 
+
+]
+
+???
+In other words provide control over content changes
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.2 (3/4)
+
+Predictable
+]
+.right-column[
+- Present content in a predictable and consistent order
+- Focus alone shouldn't trigger events: provide control over content changes
+- Locate repeating elements consistently throughout site
+   - navigation menus, search fields, skip to navigation links; help and so on
+   - same 2D position
+   - same logical linear ordering
+   
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.2 (4/4)
+
+Predictable
+]
+.right-column[
+- Present content in a predictable and consistent order
+- Focus alone shouldn't trigger events: provide control over content changes 
+- Locate repeating elements consistently throughout site
+- Use familiar names and icons for things. 
+   - Within your site/app
+   - As much as possible be consistent with global standards
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.3 (1/5)
+
+Input Assistance
+]
+.right-column[
+Some people with disabilities may have trouble with input
+- creating error-free input
+- detecting input errors
+
+Try to reduce the number of serious or irreversible errors that are made
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.3 (2/5)
+
+Input Assistance
+]
+.right-column[
+- Reduce  serious or irreversible consequences
+- Support form validation
+   - Support error identification 
+   - Provide specific and easily found text error descriptions 
+   - Provide suggestions for correcting errors
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.3 (3/5)
+
+Input Assistance
+]
+.right-column[
+- Reduce  serious or irreversible consequences
+- Support form validation
+- Make forms clear
+  - Instructions and labels for form inputs
+  - Context-sensitive help 
+]
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.3 (4/5)
+
+Input Assistance
+]
+.right-column[
+- Reduce  serious or irreversible consequences
+- Support form validation
+- Make forms clear
+- Support review
+  - Before final purchase or form submission
+  - Especially when the consequences may be serious or hard to undo
+
+]
+
+???
+(such as an expensive purchase)
+
+---
+# POUR: Adaptable: Guidelines 3.1-3.3
+
+.left-column[
+## Guideline 3.3 (5/5)
+
+Input Assistance
+]
+.right-column[
+- Reduce  serious or irreversible consequences
+- Support form validation
+- Make forms clear
+- Support review
+- Simplify authentication
+  - Automate entry of redundant information
+  - Are authentication techniques accessible?
+]
+
+---
+# Aside: CAPTCHA Accessibility
+
+.left-column50[
+![:img Screen shots of three different CAPTCHAs with various hard to read letters and numbers on them, 100%, width](img/assessment/CAPTCHAS.png)
+]
+.right-column50[
+Commonly used security method
+- Designed to be hard for computers and easy for humans
+- Require vision
+
+No good accessible alternatives -- [audio CAPTCHA are easy to crack](https://arstechnica.com/information-technology/2008/12/computer-scientists-find-audio-captchas-easy-to-crack/) and hard to use ([video with more info](https://www.youtube.com/watch?v=raFXfU7_fkg)).
+
+]
+
+???
+Pointer to later 2nd wave accessibility topic: Accessibility and computer security
+
+
+---
+# Audio CAPTCHA Accessibility
+
+.left-column50[
+![:img Screen shots of an audio CAPTCHA interface, 100%, width](img/assessment/audiocaptcha.png)
+]
+.right-column50[
+Commonly used security method
+- Designed to be hard for computers and easy for humans
+- Require vision
+
+<audio controls="controls"><source src="img/assessment/captcha.wav" type="audio/x-wav" /></audio>
+
+Answer: 
+]
+
+
+
+---
+# Finding Guideline 3.1-3.3 Violations
+
+Definitely a combination of manual and automated testing here.
+
+- 3.1 Readable
+- 3.2 Predictable
+- 3.3 Input Assistance
+
+---
+# POUR: Robust: Guideline 4.1
+
+.left-column[
+## Guideline 4.1 (1/3)
+
+Compatible
+]
+.right-column[
+
+Don't break user accessibility technologies (AT) with things like poorly formed markup
+
+Don't circumvent AT with unconventional markup/code
+
+Expose information in standard ways 
+
+Follow conventions and be compatible with APIs as much as possible
+
+]
+
+???
+This was already a running theme but let's make it explicit
+
+
+---
+# POUR: Robust: Guideline 4.1
+
+.left-column[
+## Implementing Guideline 4.1 (2/3)
+
+Compatible
+]
+.right-column[
+- Use standard and complete start and end tags on web pages
+- Use standard types of status messages to announce changes  that are not user initiated 
+   - e.g. "18 results returned" from an asynchronous search task
+- Provide name, role, and value custom controls
+
+]
+

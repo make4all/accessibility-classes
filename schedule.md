@@ -1,1 +1,1 @@
-schedule-ugrad.md
+_ignore/schedule-quals.md

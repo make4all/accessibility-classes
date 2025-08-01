@@ -1,0 +1,379 @@
+---
+layout: presentation
+title: Evaluation  --Week 4--
+description: Accessibility Needfinding and Evaluation
+class: middle, center, inverse
+---
+background-image: url(img/people.png)
+
+.left-column50[
+# Week 4: Accessible Evaluation
+
+{{site.classnum}}, {{site.quarter}}
+]
+
+---
+name: normal
+layout: true
+class:
+
+---
+
+# Important Reminder
+
+.left-column[
+![:qrhere](nil)]
+
+## Make sure zoom is running and recording!!!
+## Check on zoom buddies
+## Make sure captioning is turned on
+---
+[//]: # (Outline Slide)
+
+# Learning Goals for Today
+- How to build inclusive experiment designs
+- Running an inclusive summative study
+- How to assess whether a technology is accessible; and whether an accessibility technology is useful and usable, in an inclusive fashion.
+- Beyond automated assessment: Accessible Studies
+
+---
+
+# Summative User Testing
+
+So you have an app and you think it's accessible. How do you check that? 
+
+.quote[...getting the big picture and assessing the overall experience of a finished product...] - Nielsen Norman Group
+
+Lots of variables here, but 
+- typically checks that an app works as expected on standard tasks when used by the target population
+- may compare features or apps quantitatively 
+- may involve think aloud or other qualitative data
+
+---
+
+# Why not Start with Formative User Testing?
+
+- Many of the apps we deploy are designed for people in general
+- Disabled people need to be able to use those apps too
+- Summative testing is the gold standard in assessing accessibility
+
+Of course the entire design process *should not just include majority class people* and much of this presentation applies to formative testing took
+
+We'll also cover that later this week when we talk about designing apps *for* and *with* people with disabilities
+
+---
+
+# *Accessible* Summative User Testing
+
+- Accessibility doesn't come by accident when planning studies
+- All research should be accessible research (regardless of if it is accessibility research)
+- You have to make your system accessible (using inspection techniques) *before* doing this 
+- We will discuss accessibility *for evaluators* and *for participants* today
+
+Best guidance: [Nielsen-Norman Group](http://www.nngroup.com/reports/accessibility/testing/); [Anticipate and Adjust](https://a11ykelly.medium.com/anticipate-and-adjust-cultivating-access-in-human-centered-methods-1e46c6845e34)
+
+---
+
+# Accessible Study Planning Workflow
+
+<div class="mermaid">
+%%{init: {'theme':'base', 'themeVariables': { 'primaryColor': '#4CAF50', 'tertiaryColor': '#009688', 'fontSize': '16px', 'textMargin': '0px', 'text-align': 'left' }}%%
+
+flowchart LR
+
+    A(Identify stakeholders)
+    B(Identify tasks)
+    
+    A <--> C
+    B <--> C
+    C <--> D
+    D <--> E
+	
+    subgraph Assign tasks
+    C(Access needs
+      Effects of familiarity
+      Personal preferences
+      Institutional constraints)
+    end
+
+    subgraph Plan Accomm.
+      D(Communication 
+             Materials 
+             Time
+             Space)
+    end
+
+    subgraph Reflect
+       E(Access Synergies
+         Access conflicts
+         Power Dynamics)
+    end
+
+
+classDef default fill:#009688,stroke:#333,stroke-width:2px, color:white;
+classDef reflect fill:#4CAF50,stroke:#333,stroke-width:2px, color:white;
+class A,B,C,D default
+class A,B,C,D,E reflect
+linkStyle default stroke: black,stroke-width:8px
+
+</div>
+
+
+---
+
+# An Example
+
+Supposed you are hired to perform usability testing of new food-delivery app with people with sensory disabilities.
+
+---
+
+# Identify Stakeholders
+
+.left-column[you are hired to perform usability testing of new food-delivery app with people with sensory disabilities.]
+
+.right-column[
+Who are the stakeholders who you need to take into account for this study?
+
+  - Disabled participants (BVI, DHH)
+  - Research team
+  	- Lua -- lead researcher, has dyslexia
+  	- Jay -- project team member, Deaf person who uses sign language.
+  	- El -- project team member, non-disabled
+]
+---
+
+# Design Study
+
+.left-column[you are hired to perform usability testing of new food-delivery app with people with sensory disabilities.]
+.right-column[
+- Who are the stakeholders who you need to take into account for this study?
+- What is the right structure for the study?
+]
+---
+# Design Study (1 of 5)
+
+This is a usability study, so it should include the same tasks as tested for users without disabilities
+
+Metrics should be similar as well -- for example the [System Usability Scale](https://www.usability.gov/how-to-and-tools/methods/system-usability-scale.html) might be useful at the end
+
+---
+# Design Study (2 of 5) 
+
+This is also a study of accessibility, with disabled users. The study design needs to consider 
+
+- Choice of method 
+  - e.g. think aloud may be more difficult for a nonspeaking individual, or someone with fatigue
+  - Check in on study measures and statistical design. Does user heterogeneity impact this?
+<!-- - Study venue (It may be difficult to duplicate participant hardware/software) -->
+
+---
+# Design Study (3 of 5) 
+
+This is also a study of accessibility, with disabled users. The study design needs to consider 
+
+- Ensure that participants' hardware/software also addresses study needs (e.g. do participants have a working monitor?)
+- Study length (estimate before and after piloting)
+   - Study length may increase for some disabled participants
+   - Study length may negatively impact participants with fatigue-related concerns
+
+---
+# Design Study (4 of 5)
+
+Study metrics may also need revision.
+.left-column50[
+Consider adding
+- Click errors
+- Success criteria & ratings
+- Accessibility errors
+]
+.left-column50[
+Consider changing
+- Any metrics that include ableist assumptions
+- Approach to time based measurements
+]
+
+
+---
+# Design Study (5 of 5) 
+
+It is also important to consider ethical issues
+
+- What responsibility do you have to participants in terms of providing skills and help in & out of study?
+- What responsibility do you have to give participants a participatory role in design?
+- How do you ensure the integrity of your record of their experience?
+- Are you compensating them appropriately and addressing costly transportation needs?
+
+???
+These changes may in turn impact
+- Expense 
+- Scalability 
+
+---
+
+# Plan Study Tasks
+
+Supposed you are hired to perform usability testing of new food-delivery app with people with sensory disabilities.
+- Who are the stakeholders who you need to take into account for this study?
+- What is the right structure for the study?
+- What study tasks should this team prepare for?
+  
+---
+
+# Tasks List
+To perform standard usability testing on the app based on disabilities represented in sample
+
+1. Assign Tasks
+2. Train study team 
+3. Handle recruitment 
+4. Pilot with people with disabilities
+5. Run the Study
+6. Analyze the data
+
+---
+--- 
+
+# 1. Assign Tasks
+- Consider:
+	- access needs
+	- effects of familiarity with the task
+	- personal preferences
+	- other institutional constraints
+- For this scenario:
+	- Lua has significant experience running studies; Lua needs a study script in large print with a specific font
+	- El wants to gain more experience running studies
+	- Jay has significant experience with ASL and Deaf Space; Jay prefers to have interpreters
+
+---
+
+# Task Assignment List
+1. ~~Assign Tasks~~
+2. **Lua**: Train study team 
+3. **Jay**: Handle recruitment 
+4. **Jay**: Pilot with people with disabilities
+5. **Lua**: Run the Study
+    - **Lua**: Prepare study materials (e.g., print out protocols)
+    - **Jay**: Hire access support staff
+    - **Participants**: Participate in the study
+    - **El**: Compensate participants
+6. **All**: Analyze the data
+
+---
+
+# 2. Train study team (1 of 2)
+
+As study lead, and a person with both disability and study related experience, Lua will train the study team. 
+
+Her goal is to ensure that El and Jay are aware of best practices and considerations that might impact study design before they begin interacting with participants. 
+
+---
+
+# 2. Train study team (2 of 2)
+
+Some things they might discuss include
+- Ensuring that they address access needs and communication support from recruitment onward
+- Providing basic DEIA training as needed so that all those with participant contact know basics. 
+  - Don’t be overly sensitive (don’t overcompensate)
+  - Don’t rely on useless cues (audio/visual) to convey encouragement
+  - Monitor participant fatigue carefully
+  - When to help and when to end a task if participants have trouble
+---
+
+# 3. Handle Recruitment (1/2)
+As a person already connected to the disability community, the team determines that Jay will be most likely to be trusted, and to identify opportunities to build trust throughout the recruitment process. 
+
+Recruitment raises a number of access issues
+- Are your recruitment materials accessible
+- How will you find participants (next slide)
+- How will you compensate participants?
+
+---
+
+# 3. Handle Recruitment (2/2)
+
+Finding participants may require careful work
+- How much do you know about the group your are targeting and what to expect from/of them?
+- Will they see you as trustworthy? 
+- Are you giving them enough agency in the study process?
+- Maybe start with gatekeepers
+  - Negotiating access often requires working with gatekeepers
+  - Participants may see researchers as “just another professional, conducting professional surveillance”
+
+---
+# 4. Pilot study
+
+First, revisit accommodations plan
+
+.left-column50[
+Consider:
+- Communication
+- Materials
+- Time
+- Space
+]
+--
+.right-column50[
+Prepare: 
+- Hire interpreters (at least 2 weeks in advance)
+- Print out accessible study materials, consent form, etc
+- Set up the room
+- Have compensation ready
+]
+
+---
+
+# Reflect
+- Lua gets tired from reading overtime
+- Jay knows ASL and Deaf norms
+- Study length was problematic for one Blind participant who also had a chronic illness
+- Sometimes sightlines made it hard for Jay to see the interpreter
+
+---
+
+# Update Study Design Based on Reflection
+
+- Institute a protocol for monitoring fatigue
+- Add a cutoff for tasks that take a long time
+- Rearrange the room to better support communication with interpreters
+- ...
+
+---
+# Update Tasks List Based on Reflection
+
+1. ~~Assign Tasks~~
+2. ~~Lua: Train study team~~ (done)
+3. **Jay**: Handle recruitment (ongoing)
+4. ~~Jay: Pilot with people with disabilities~~ (done)
+5. ~~Lua~~ **Jay & El**: Run the Study
+    - **Lua**: Prepare study materials (e.g., print out protocols)
+    - **Jay**: Hire access support staff
+    - **Participants**: Participate in the study
+    - **El**: Compensate participants
+6. **All**: Analyze the data
+
+---
+
+# 5. Run the Study
+
+At this point the team should be well prepared. However, it is still important to monitor both the team's and the participants' needs and adjust as accessibility concerns arise. 
+
+Similar to piloting a study 
+
+---
+
+# 6. Analyze the Data 
+
+This is another area where access concerns may come up. 
+- Data analysis tools may not be accessible
+- Team members may have different needs with respect to written versus audio transcripts
+- <q>Member Checking</q>
+
+---
+# (If time) Try it 
+
+You read about Alexa's use by people with disabilities in class. Form small groups
+- Identify potential tasks to test 
+- Write down a sampling goal (who is included)
+- Write down a list of accessibility assessment goals (metrics)
+- Identify potential accessibility concerns 
+
+
