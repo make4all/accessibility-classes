@@ -8,3 +8,6 @@ _site/
 node_modules/
 vendor/
 .ruby-version
+_modules
+_schedules
+.DS_Store

@@ -1,0 +1,413 @@
+---
+layout: presentation
+title: Comparing Assessment Techniques
+description: Accessibility
+class: middle, center, inverse
+---
+background-image: url(img/people.png)
+
+.left-column50[
+# Welcome to the Future of Access Technologies
+
+Comparing Assessment Techniques
+
+{{site.classnum}}, {{site.quarter}}
+]
+---
+name: normal
+layout: true
+class:
+
+---
+# Important Reminder
+
+.left-column[
+![:qrhere](nil)]
+
+## Make sure zoom is running and recording!!!
+## Check on zoom buddies
+## Make sure captioning is turned on
+
+
+---
+# Announcements
+
+Grades out (earlier than we realized -- we didn't realize comments went to you immediately)
+
+Office hours canceled next week except Friday and by appointment
+
+Section: still deciding on whether it will be virtual only. Watch for a post on Ed by Wednesday
+
+Reminder: Guest lecture, in person, M and W
+
+---
+[//]: # (Outline Slide)
+# Learning Goals for today
+
+- What are trade offs between assessment techniques
+- Example of a carefully designed empirical study
+
+---
+# Many Possible Techniques for Assessment
+
+Learning design guidelines (baseline for any other technique)
+
+Automated Assessment
+
+Simulation/Using accessibility Tools
+
+User Studies (focus of next week)
+
+---
+# Which one Should You Use?
+
+What technique will find the most user accessibility problems?
+
+What technique will find the most guideline violations?
+
+What techniques could someone without accessibility training successfully use?
+
+How do you trade off cost & value?
+
+How do you get a system to the point where user testing is worth doing?
+
+---
+# Study to answer these questions
+
+[Is your web page accessible? A comparative study...](https://dl.acm.org/doi/10.1145/1054972.1054979)
+
+Gather baseline problem data on 4 sites (Usability Study)
+
+Test same sites with other techniques
+- Expert review with guidelines
+- Screen reader
+- Automated tool
+- Remote
+
+Compare problems found to baseline study
+
+---
+# Baseline Study
+5 blind JAWS users 
+- 2 to 6+ years of experience 
+- Used web for e-mail, shopping, information, and news
+
+4 tasks (each on a different site)
+- Range of difficulty
+- Representative activities: bus trip planner; find names on a page; register for a class; grocery item search
+
+---
+# Think Aloud Protocol
+
+Focused analysis on *accessibility* problems (not *usability* or *technology* problems)
+- [+] “Pop up. Had to ask for sighted help to continue”
+- [+] “Date entered in incorrect format” 
+- [-] “Their slogan is annoying”
+- [-] “Forgot JAWS command for forms mode”
+Ranked problems by severity, found 3-10 per site
+
+Grouped like problems (e.g. all encounters with the pop-up window)
+
+???
+AT the time, WCAG 1; Meeting WCAG priority 1 guidelines did not address all severe problems
+
+---
+# Results -- Grocery
+
+.left-column50[
+![:img Picture of the front page of the albertson's website for ordering groceries online,80%, width](img/assessment/grocery.png) 
+]
+
+.right-column50[
+![:img Picture of the grocery cart for the the albertson's website,83%, width](img/assessment/grocery2.png) 
+]
+---
+# Results -- Grocery
+
+.left-column50[
+Special, accessible website
+
+Easiest site
+
+7 accessibility problems
+
+- Redundant text
+
+- Problems with forms
+…
+]
+
+.right-column50[
+![:img Picture of the grocery cart for the the albertson's website,83%, width](img/assessment/grocery2.png) 
+]
+---
+# Results -- Find Names
+
+.left-column50[
+2 simple HTML pages
+
+3 accessibility problems
+- Front page: Use of headers confusing
+- Front page lacked clear description of contents/purpose
+- Name page: too many links
+]
+
+.right-column50[
+![:img Picture of the list of graduate students in Berkeley's HCI group GUIR at the time of the study,80%, width](img/assessment/findnames.png) 
+]
+
+---
+# Results -- Bus
+
+.left-column50[
+Most difficult site
+
+10 accessibility problems
+- Lack of ALT text
+- Bad form labeling
+- Non-descriptive link names
+- Lack of directions/ description of purpose
+]
+
+.right-column50[
+![:img Picture of the public transportation website for using  buses in Berkeley at the time of the study,100%, width](img/assessment/bus.png) 
+]
+
+---
+# Results -- Bus
+
+.left-column50[
+
+1 page 
+
+9 accessibility problems
+- Required field marked only with “bold” text
+- No directions about syntax requirements
+- Fields not well labeled
+…
+]
+
+.right-column50[
+![:img Picture of a simple fake class registration form we made for the study,80%, width](img/assessment/registration.png) 
+]
+
+---
+# Comparative Study
+
+Piloted techniques to be compared
+
+Gathered data on success of each technique for same tasks as baseline
+
+Analyzed results
+
+---
+# Comparative Study
+
+Four conditions
+- Expert Review (web experts)
+- Screen Reader (web experts w/ screen reader)
+- Automated (Bobby)
+- Remote (expert, remote blind users)
+
+Four tasks/sites (same as baseline)
+- 18 current web developers (2-8 yrs exp)
+- Never developed an accessible website
+- Three had taken a class that covered some issues
+- 9 remote, experienced JAWS users
+
+---
+# Web Developers
+
+All web developers introduced to WCAG Priority 1 guidelines (best available at the time)
+
+8 web developers given a Screen Reader tutorial & practice time (~15mins)
+
+Instructed to only review task pages
+
+Think aloud method
+
+---
+# Remote, BLV users
+
+Given parallel instructions 
+
+Asked to email problems back to us
+
+---
+# Analysis
+
+Coded problems: WCAG & Empirical (baseline)
+
+Hypothesis 1: No technique will be more effective than any other, where effectiveness is a combination of: 
+- Thoroughness (portion of actual problems)
+- Validity (false positives)
+
+Hypothesis 2: The types of accessibility problems found by each technique will be the same
+
+- Categories of problems found by each technique
+
+---
+# General Results
+
+1-2 hours to complete
+
+No correlation between developer severity and WCAG priority or empirical severity
+
+5 of 9 remote participants failed to complete 1 of the 4 tasks
+
+---
+# H1: Methods Don't Differ 
+.left-column[
+Manual Review found lots of problems
+]
+.right-column[
+<!-- <div class="mermaid"> -->
+<!-- pie title Problems Found by Condition -->
+<!--     "Dev. Review" : 8 -->
+<!--     "Guidelines Only" : 10 -->
+<!--     "Remote" : 9 -->
+<!-- </div> -->
+
+![:img barchart showing that Dev. Review found 8 problems, Guidelines 10, and Remote 9,100%, width](img/assessment/IDCondition.png) 
+
+]
+
+---
+# H1: Methods Don't Differ 
+.left-column[
+Manual Review as effective as remote screen reader users: % of problems reported in each condition that matched known problems
+]
+
+.right-column[
+![:img barchart showing that Dev. Review 78% valid, Guidelines 94% valid, and Remote 82% valid,80%, width](img/assessment/Validity.png) 
+]
+
+---
+# H1: Methods Don't Differ 
+.left-column[
+Manual Review as effective as remote screen reader users: % of known accessibility problems found in each condition
+]
+
+.right-column[
+![:img barchart showing that Dev. Review 33% valid, Guidelines 41% valid, and Remote 26% valid,80%, width](img/assessment/Thoroughness.png) 
+]
+
+
+---
+# H2: Techniques find Different Problems
+
+.left-column60[
+
+WCAG 1 
+
+|               | G1 | G2 | G3 | G4 | G5 | G9 | G10 | G12 | G13 | G14 |
+|:--------------|:---|:---|:---|:---|:---|:---|:----|:----|:----|:----|
+| Expert Review | Y  | Y  | Y  |    |    | Y  | Y   | Y   | Y   |     |
+| Screen Reader | Y  | Y  | Y  | Y  |    | Y  | Y   | Y   | Y   | Y   |
+| Remote        | Y  | Y  |    |    | Y  | Y  | Y   | Y   | Y   | Y   |
+| Automated     | Y  | Y  |    |    | Y  |    |     |     | Y   |     |
+
+]
+
+.right-column40[
+- G1,2: AV alternatives & not just color
+- G3,4: Good markup and clear language
+- G5: Tables
+- G9,10: Device independence & interim solutions for things like JavaScript
+- G12,13: Context & Navigation
+- G14; clear and simple text
+]
+
+---
+# H2: Techniques find Different Problems
+
+.left-column60[
+
+Empirical
+
+|               | E1 | E2 | E3 | E4 | E5 | E6 | E7 | E8 | E9 |
+|:--------------|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+| Expert Review | Y  | Y  | Y  | Y  |    | Y  | Y  | Y  | Y  |
+| Screen Reader | Y  |    | Y  | Y  | Y  | Y  | Y  | Y  | Y  |
+| Remote        | Y  |    | Y  | Y  |    | Y  | Y  |    | Y  |
+| Automated     | Y  |    |    |    |    |    |    |    |    |
+
+]
+.right-column40[
+- E1: No alt text
+- E2: Poor defaults
+- E3: Poor formatting
+- E4: Too much data
+- E6: No directions
+- E7: Visual pairing
+- E8: Poor names
+- E9: Popups
+]
+
+---
+# Aside: WCAG has come a long way
+
+Many (perhaps all) of these are part of guidelines now
+
+- E1: Should have no alt text
+- E2: Poor defaults
+- E3: Poor formatting
+- E4: Too much data
+- E6: No directions
+- E7: Visual pairing
+- E8: Poor names
+- E9: Popups
+
+<!-- --- -->
+<!-- # H2: Techniques find Different Types of Problems -->
+
+<!-- - High variance among individual reviewers -->
+<!-- - Screen reader novices did best at both major types of problems -->
+
+<!-- ![:img Four bar charts each showing the cumulative benefit in terms of percentage of known problems found of adding evaluators. The first bar chart shows expert reviewers; who reach 30% of WCAG problems and 60% of empirical problems by the third evaluator. The second bar chart shows novice screen reader users who reach 60% of both empirical and WCAG problems by the fifth evaluator. The third bar chart shows remote BLV participants who reach 25% of WCAG and just under 20% of empirical problems by the fifth evaluator. The fourth bar chart shows an automated tool which finds about 25% of WCAG and 5% of empirical problems,100%, width](img/assessment/cumulative.png)  -->
+
+<!-- ??? -->
+<!-- Explain chart -->
+<!-- also tracks heuristic eval literature: Five Evaluators find ~50% of Problems -->
+<!-- Individuals don't do well, but they  *differ*  from each other -->
+
+---
+# Other findings
+
+<!-- Hyp 1: Screen reader most consistently effective -->
+
+<!-- Hyp 2: All but automated comparable -->
+
+<!-- - Screen missed only tables (w3); poor defaults (empirical) -->
+
+Really need multiple evaluators
+
+Remote technique needs improvement, could fare better
+
+Accessibility experience would probably change results
+
+<!-- --- -->
+<!-- # Discussion -->
+
+<!-- Asymptotic testing needed -->
+<!-- - Can’t be sure we found all empirical problems -->
+
+<!-- Falsification testing needed -->
+<!-- - Are problems not in empirical data set really false positives? -->
+
+<!-- More consistent problem reporting & comparison beneficial -->
+
+Limitations
+- Web only
+- Design of remote test limited result quality
+- Very old study
+
+---
+# Small Group Discussion
+
+Find the students who assessed the same website as you.
+
+Talk about the UARs you generated. Did you find different problems
+from other students? Why do you think you did, or did not, find different problems?
+
+Post your discussion notes to the Ed Thread for your website.

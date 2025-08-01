@@ -3,12 +3,26 @@
 # you will see them accessed via {{ site.title }}, {{ site.github_repo }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Just the Class
-tagline: A Jekyll template for course websites
-description: A modern, highly customizable, responsive Jekyll template for course websites
-author: Kevin Lin
-baseurl: '/just-the-class' # the subpath of your site, e.g. /blog
-url: 'https://kevinl.info' # the base hostname & protocol for your site, e.g. http://example.com
+title: Accessibility Classes Content
+tagline: All the content you need to start an accessibility class
+description: Learn about app accessibility; how accessibility can be incorporated into cutting edge computer science topics like machine learning and fabrication; and the interaction of accessibilty technology and society
+author: J. Mankoff
+baseurl: '/cseXXX/YYqq' # the subpath of your site, e.g. /blog
+url: 'https://courses.cs.washington.edu' # the base hostname & protocol for your site, e.g. http://example.com
+staff_email: uaccess@cs.washington.edu
+canvas_course: 1746643
+git_branch: UACCESS-24fa
+discussion: https://edstem.org/us/courses/67367/discussion
+canvas: https://canvas.uw.edu/courses/1746643
+submit: https://canvas.uw.edu/courses/1746643/assignments/
+outcomes: https://canvas.uw.edu/courses/1746643/outcomes/
+closed:
+warning:
+room: BLD ###
+classtime: DDD TT:tt-TT:tt AM|PM
+classnum: CSEXXX
+quarter: "Quarter YYYY"
+copydate: "7/4/24"
 exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
 # Theme settings
@@ -18,11 +32,24 @@ search_enabled: true
 heading_anchors: true
 permalink: pretty
 aux_links:
-  Kevin Lin:
-    - 'https://kevinl.info'
-  Just the Class on GitHub:
+  J. Mankoff:
+    - 'https://make4all.org/jennifer-mankoff/'
+  JtC (GitHub):
     - 'https://github.com/kevinlin1/just-the-class'
-footer_content:
+aux_links_new_tab: true
+footer_content: The University of Washington acknowledges the Coast Salish peoples of this land, the land which touches the shared waters of all tribes and bands within the Suquamish, Tulalip and Muckleshoot nations.  This site is maintained by J. Mankoff. 
+last_modified_date: July 31, 2025
+last_edit_timestamp: true # show or hide - page must have a 'last_modified_date' defined in the frontmatter
+mermaid:
+  version: "9.1.3"
+back_to_top: true
+back_to_top_text: "Back to top"
+logo: "/assets/images/favicon.png"
+git_username: jmankoff
+gh_edit_link: true # show or hide edit this page link
+gh_edit_link_text: "Edit this page on GitHub."
+gh_edit_repository: "https://github.com/make4all/accessibility-classes" # the github URL for your repo
+gh_edit_branch: "UACCESS-YYqq" # the branch that your docs is served from
 
 # Collections for website data
 collections:
@@ -30,6 +57,7 @@ collections:
   modules:
   schedules:
   announcements:
+  syllabus:
   slides:
     nav_exclude: true
   ignore:
@@ -60,6 +88,12 @@ defaults:
       type: announcements
     values:
       layout: announcement
+  - scope:
+      path: ''
+      type: syllabus
+    values:
+      layout: syllabus
+      subpath: '/assets/imagse/'
 
 compress_html:
   clippings: all
@@ -72,3 +106,15 @@ compress_html:
 liquid:
   error_mode: strict
   strict_filters: true
+
+
+toc:
+  min_level: 1
+  max_level: 2
+
+font-awesome:
+  assets: true
+
+# Custom vars
+version:             3.1.0
+

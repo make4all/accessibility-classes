@@ -1,0 +1,400 @@
+---
+layout: presentation
+title: Best Practices  --Week 4--
+description: Best Practices for Building Accessible Apps
+class: middle, center, inverse
+---
+background-image: url(img/people.png)
+
+.left-column50[
+# Building For Accessibility
+
+{{site.classnum}}, {{site.quarter}}
+]
+---
+name: normal
+layout: true
+class:
+
+---
+# Important Reminder
+
+.left-column[
+![:qrhere](nil)]
+
+## Make sure zoom is running and recording!!!
+## Check on zoom buddies
+## Make sure captioning is turned on
+
+---
+# Announcements (1/2)
+
+[Joo?] will be covering my office hours on Monday even though I am traveling.
+Other announcements are in the post 
+
+---
+[//]: # (Outline Slide)
+# Learning Goals for Today 
+
+- **Building for Accessibility**
+  - We will focus on screen readers 
+  - And understanding structure in interactive apps
+  - And how this impacts user agents (such as screen readers)
+- Assignment
+
+---
+# (On-desktop) screen reader interaction
+Three core  interaction patterns:
+- Linear navigation through like objects
+- Hierarchical navigation through logically related objects
+- Switching between object types
+
+---
+# (On-phone) screen reader interaction
+
+.left-column[
+![:img screen reader by Sophia Bai from the Noun Project, 100%, width](img/assessment/screenreader.png)
+]
+.right-column[
+Three core interaction patterns: 
+
+- Swipe to navigate linearly
+- Touch to navigate spatially
+- The first “hit” of an interface element will focus, double tap to select/activate that interface element
+]
+
+???
+Discuss similarities and differences from desktop
+
+---
+# Structure of a Web Page
+
+| Content | Structure | Style | Behavior |
+| :--: | :--: | :--: | :--: |
+|![:img bones, 20%,width](img/building/bones.png)|
+| Words and Images | HTML | CSS | JavaScript |
+
+---
+# Structure of a Web Page
+
+| Content | Structure | Style | Behavior |
+| :--: | :--: | :--: | :--: |
+|![:img bones, 40%,width](img/building/bones.png)|![:img Skeleton, 40%,width](img/building/full-skeleton.png)|
+| Words and Images | HTML | CSS | JavaScript |
+
+---
+# Structure of a Web Page
+
+| Content | Structure | Style | Behavior |
+| :--: | :--: | :--: | :--: |
+|![:img bones, 50%,width](img/building/bones.png)|![:img Skeleton, 50%,width](img/building/full-skeleton.png)|![:img Boundless Skeleton, 50%,width](img/building/dressed-skeleton.png)|
+| Words and Images | HTML | CSS | JavaScript |
+
+
+---
+# Structure of a Web Page
+
+| Content | Structure | Style | Behavior |
+| :--: | :--: | :--: | :--: |
+|![:img bones, 60%,width](img/building/bones.png)|![:img Skeleton, 60%,width](img/building/full-skeleton.png)|![:img Boundless Skeleton, 60%,width](img/building/dressed-skeleton.png)|![:img Animated Boundless Skeleton, 60%,width](img/building/animated-skeleton.gif)|
+| Words and Images | HTML | CSS | JavaScript |
+
+---
+# Lifecycle of a browser loading a page
+
+.left-column40[
+1. Fetch the page
+2. Parse the page
+3. Build up an internal representation of the web page [structure]
+4. Display the page [style]
+5. Handle interaction [behavior]
+]
+.right-column60[
+![:img Screen capture of the UW news front page, 60%,width](img/building/webpage.png)
+]
+
+---
+# Parse and Display the Page
+
+.left-column[
+![:img Initial screen for the spot the heron app, 90%,width](img/building/spottheheronscreen.png)
+
+]
+
+.right-column[
+1. First line: <!DOCTYPE html>
+   -  OK: need to build an internal representation of the page
+2. Line-by-line, go through the HTML
+   - If one of the tags links to a cascading style sheet (CSS) file, load and parse it
+   - If one of the tags links to JavaScript (JS) for behavior, load and parse it
+3. FINALLY display the page…
+]
+
+
+---
+# Understanding content
+
+.column-90[
+- There are 100s of possible HTML tags! See [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)!
+- Some simple tags
+  - Title ```<title></title>``` (which nests inside your ```<head></head>```)
+  - Headings ```<h1></h1>``` .. ```<h6></h6>```
+  - Paragraphs ```<p>```
+  - Ordered or unordered lists: ```<ol></ol>```, ```<ul></ul>```, with list elements ```<li></li>```
+  - Horizontal rules ```<hr />```
+  - Strong ```<strong></strong>``` which defaults to a bold style and emphasis ```<em></em>``` which defaults to italicized in most browsers.
+]
+
+---
+
+# Adding content
+
+- There are 100s of tags! See [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)!
+- Some simple tags
+- Some tags add semantic context
+  - `<header></header>`: The header or banner that displays the title of the page
+  - `<main></main>`: The bulk of the content of the page
+  - `<footer></footer>`: The footer is optional but you can put contact info and copyright date in there.
+
+---
+# Adding content
+
+- There are 100s of tags! See [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)!
+- Some simple tags
+- Some tags add semantic context
+- Some tags need additional information, added to a tag with attributes
+  - Links to other pages `<a href="filename"></a>`
+  - Links to images `<img src="img.jpg" alt="Description!"/>`
+
+---
+# Adding content
+
+- There are 100s of tags! See [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)!
+- Some simple tags
+- Some tags add semantic context
+- Some tags need additional information, added to a tag with attributes
+- Some tags (comments) are important for documentation `<!-- -->`
+
+
+---
+# Cascading Style Sheets (CSS)
+
+- Allows us to change the look and feel of the content on the page
+- Style is separated into a .css file
+  - Makes styling multiple pages easier
+  - Allows changing multiple pages easier
+- Style sheets must be linked to an html page in the <head> for the styles to work
+     `<link href=“style.css” rel=“stylesheet” />`
+- Great example is [CSS Zen Garden](http://www.csszengarden.com/)
+
+---
+# Document Object Model (DOM) (1/3)
+
+.left-column[
+![:img Initial screen for the spot the heron app, 90%,width](img/building/spottheheronscreen.png)
+]
+
+.right-column[
+- We must build up a hierarchy of document elements (the **Document Object Model**)
+- The structure of this depends on our HTML (or the toolkit that generates your HTML or App)
+- The structure of this influences layout 
+
+]
+
+---
+# Document Object Model (DOM) (2/3)
+
+.left-column[
+![:img Initial screen for the spot the heron app, 90%,width](img/building/spottheheronscreen.png)
+]
+
+.right-column[
+What does this hierarchy look like?
+
+]
+
+---
+# Document Object Model (DOM) (3/3)
+
+.left-column[
+![:img Initial screen for the spot the heron app, 90%,width](img/building/spottheheronscreen.png)
+]
+
+.right-column[
+<div class="mermaid">
+flowchart TD
+    A(Main Window)
+    B(Vertical Layout)
+    C("Spot the Heron" Label)
+    D(Picture of a heron in water with some reeds)
+    E(Horizontal Layout: Controls)
+    F(Left arrow)
+    G(Play)
+    H(Right arrow)
+    A --> B
+    B --> C
+    B --> D
+    B --> E
+    E --> F
+    E --> G
+    E --> H
+
+classDef default fill:#009688,stroke:#333,stroke-width:2px, color:white;
+classDef reflect fill:#4CAF50,stroke:#333,stroke-width:2px, color:white;
+class A,B,C default
+class A,B,C,D,E reflect
+linkStyle default stroke: black,stroke-width:8px
+
+
+</div>
+
+]
+
+---
+# Let's compare that to an app 
+
+.left-column50[
+Components: *library elements* (e.g. buttons and labels) combined according to *toolkit rules* 
+
+![:img Picture of a very simple interface showing a ringing bell at
+left and an x at right to close the window with the words Google
+Calendar reminder Christian and Anind (Jen Mankoff) is starting at
+12:30pm. Video call between them, 100%, width](img/building/interface.png)
+
+]
+.right-column50[
+- What are the "components" in this image?
+- What does the "interactor hierarchy" look like for this image
+
+Discuss with your neighbor and [Post]({{site.discussion}}/5486446)
+
+]
+
+???
+discuss with your neighbor
+- what to draw; where to draw it
+---
+# Let's compare that to an app (Answer)
+
+.left-column50[
+Components: *library elements* (e.g. buttons and labels) combined according to *toolkit rules* 
+
+![:img Picture of a very simple interface showing a ringing bell at
+left and an x at right to close the window with the words Google
+Calendar reminder Christian and Anind (Jen Mankoff) is starting at
+12:30pm. Video call between them, 100%, width](img/building/interface.png)
+]
+.right-column50[
+<div class="mermaid">
+graph TD
+W(Window) --> H[Horizontal layout]
+	H --> I1[fa:fa-bell Bell ]
+	H --> V[Vertical Layout]
+	V --> I2[Title: Google Calendar reminder]
+	V --> I3[Text: Christian and Anind --Jen Mankoff-- is
+	         starting at 12:30pm. - Video call]
+classDef default fill:#009688,stroke:#333,stroke-width:2px, color:white;
+classDef reflect fill:#4CAF50,stroke:#333,stroke-width:2px, color:white;
+class H,V default
+class I1,I2,I3 reflect
+linkStyle default stroke: black,stroke-width:8px
+</div>
+
+]
+
+---
+# QUICK BREAK
+
+Good time to stand and stretch
+
+---
+# How do we make it more interactive?
+
+
+How about we add a button?
+--
+count: false
+
+
+Wait? When you hear the word "button" in the context of a graphical user
+interface (GUI), what do you think of?
+
+---
+# What should it do?
+
+What do we tell the toolkit about the button?
+- Where to place it
+- How it should react to user input (from which device?)
+
+---
+# Screen Reader Information Flow (1/2)
+What happens when the user is exploring/navigating?
+
+<DIV class="mermaid">
+graph LR
+SR[fa:fa-volume-up <BR> Screenreader<BR>]:::bluelarge -->|Asks for next object in DOM| API(fa:fa-codepen<BR> Accessibility API<BR>):::bluelarge
+API -->|Passes along request| ATK[<BR> Toolkit<BR>]:::bluelarge
+ATK -->|Checks Details| App[fa:fa-mobile <BR>App<BR>]:::bluelarge
+App -->|Name: Foo| ATK
+ATK -->|Name, Role: Button| API
+API -->|Name, Role| SR
+Speak(fa:fa-volume-up Button, Foo ):::bluelarge
+
+</div>
+--
+... (repeat for each swipe / component)
+
+---
+# Screen Reader Information Flow (2/2)
+What happens when the user double taps to invoke?
+
+<DIV class="mermaid">
+graph LR
+SR[fa:fa-volume-up <BR> Screenreader<BR>]:::bluelarge -->|Invokes object| API(fa:fa-codepen<BR> Accessibility API<BR>):::bluelarge
+API -->|Passes along request| ATK[<BR> Toolkit/<BR>Browser]:::bluelarge
+ATK -->|Invokes Callback| App[fa:fa-mobile <BR>App<BR>]:::bluelarge
+App -->|Updates Interface<BR>Announces Changes| ATK
+ATK -->|Passes along information| API
+API -->|Deleted text| SR
+Speak(fa:fa-volume-up Deleted Text ):::bluelarge
+
+</div>
+
+---
+[//]: # (Outline Slide)
+# Learning Goals for Today
+
+- Manual Accessibility Testing
+  - We will focus on screen readers 
+  - And understanding structure in interactive apps
+  - And how this impacts user agents (such as screen readers)
+- Building for Accessibility
+- **Assignment**
+
+<!-- [//]: # TODO expand this slide deck? IT's short and could cover more. Also discuss how this should impact the report -->
+
+---
+# This week's assignment
+The goal of this homework is to make something more accessible (e.g. website, visualization, user interface, AR/VR, etc) that you’ve already made.
+
+Required learning goals: 
+- Accessible Document Creation
+- Familiarity with a Range of Accessibility Technologies
+- Image Description
+
+???
+If you don't have an interface, come speak with us! 
+
+---
+[//]: # (Outline Slide)
+# Learning Goals for Today
+
+- Manual Accessibility Testing
+  - We will focus on screen readers 
+  - And understanding structure in interactive apps
+  - And how this impacts user agents (such as screen readers)
+- Building for Accessibility
+- Assignment
+
+<!-- [//]: # TODO expand this slide deck? IT's short and could cover more. Also discuss how this should impact the report -->
+

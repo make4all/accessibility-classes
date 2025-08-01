@@ -1,0 +1,599 @@
+---
+layout: presentation
+title: More Best Practices
+description: Accessibility
+class: middle, center, inverse
+---
+background-image: url(img/people.png)
+
+.left-column50[
+# More Best Practices
+
+{{site.classnum}}, {{site.quarter}}
+]
+---
+name: normal
+layout: true
+class:
+
+---
+# Important Reminder
+
+.left-column[
+![:qrhere](nil)]
+
+## Make sure zoom is running and recording!!!
+## Check on zoom buddies
+## Make sure captioning is turned on
+
+---
+[//]: # (Outline Slide)
+# Learning Goals for Today
+
+- **Finishing accessible button example**
+- How do we use automated tools?
+- What are the trade offs between different tools?
+
+---
+# What should a button do? (1/4)
+
+What do we tell the toolkit about the button?
+- Where to place it
+
+---
+# How do we specify location *to a screenreader*?
+
+All based on the DOM hierarchy we practiced constructing
+- Will be presented linearly or based on landmarks like headers depending on navigation mode
+
+???
+Naturally exists in the interactor hierarchy/DOM, but is it in an intuitive place for navigation? 
+
+---
+# Screen Reader Information Flow For Navigation
+What happens when the user is exploring/navigating?
+
+<DIV class="mermaid">
+graph LR
+SR[fa:fa-volume-up <BR> Screenreader<BR>]:::bluelarge -->|Asks for next object in DOM| API(fa:fa-codepen<BR> Accessibility API<BR>):::bluelarge
+API -->|Passes along request| ATK[<BR> Toolkit<BR>]:::bluelarge
+ATK -->|Checks Details| App[fa:fa-mobile <BR>App<BR>]:::bluelarge
+App -->|Name: Foo| ATK
+ATK -->|Name, Role: Button| API
+API -->|Name, Role| SR
+Speak(fa:fa-volume-up Button, Foo ):::bluelarge
+
+</div>
+--
+... (repeat for each swipe / component)
+
+---
+# A page with layout
+
+.left-column60[
+(table but imagine it was  CSS)
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-w747{background-color:#dae8fc;text-align:left;vertical-align:top}
+.tg .tg-kftd{background-color:#efefef;text-align:left;vertical-align:top}
+.tg .tg-ltxa{background-color:#ffccc9;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-kftd" colspan="3"><span style="color:#333;background-color:#FFF">Title spanning whole width of table</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-w747" rowspan="3">Navigation 1<br>Navigation 2<br>Navigation 3<br>Navigation 4</td>
+    <td class="tg-ltxa">Banner Ad</td>
+    <td class="tg-w747" rowspan="3">Right Nav 1<br>Right Nav 2<br>Right Nav 3</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">Main content area with lots of text and stories <br>filling the center part of the window</td>
+  </tr>
+  <tr>
+  </tr>
+</tbody>
+</table>
+
+Discuss and [post]({{site.discussion}}/5521103)
+Structure your answer as in this example:
+
+- Title -- 1
+- Banner ad -- 2 
+- ...
+]
+.right-column40[
+Pick a navigation approach (e.g. tabbing)
+
+What focus order makes sense for this approach? 
+
+What meta-data is needed to provide that?
+]
+
+
+---
+# Swipe order? (bad)
+
+.right-column60[
+| Cell         | Nefarious order |
+|--------------|-----------------|
+| Title        | 1               |
+| Right Nav 1  | 7               |
+| Right Nav 2  | 8               |
+| Right Nav 3  | 9               |
+| Banner ad    | 2               |
+| Navigation 1 | 3               |
+| Navigation 2 | 4               |
+| Navigation 3 | 5               |
+| Navigation 4 | 6               |
+| Content      | 10              |
+
+]
+.left-column40[
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-w747{background-color:#dae8fc;text-align:left;vertical-align:top}
+.tg .tg-kftd{background-color:#efefef;text-align:left;vertical-align:top}
+.tg .tg-ltxa{background-color:#ffccc9;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-kftd" colspan="3"><span style="color:#333;background-color:#FFF">Title spanning whole width of table</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-w747" rowspan="3">Nav 1<br>Nav 2<br>Nav 3<br>Nav 4</td>
+    <td class="tg-ltxa">Banner Ad</td>
+    <td class="tg-w747" rowspan="3">Right Nav 1<br>Right Nav 2<br>Right Nav 3</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">Main content area with lots of text and stories filling the center part of the window</td>
+  </tr>
+  <tr>
+  </tr>
+</tbody>
+</table>
+]
+
+---
+# Swipe order? (better)
+
+.right-column60[
+| Cell         | Nefarious | Well designed |
+|--------------|-----------|---------------|
+| Title        | 1         | 1             |
+| [skip cell]  |           | 2             |
+| Navigation 1 | 3         | 3             |
+| Navigation 2 | 4         | 4             |
+| Navigation 3 | 5         | 5             |
+| Navigation 4 | 6         | 6             |
+| Right Nav 1  | 7         | 7             |
+| Right Nav 2  | 8         | 8             |
+| Right Nav 3  | 9         | 9             |
+| Banner ad    | 2         | 10            |
+| Content      | 10        | 11            |
+
+]
+.left-column40[
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-w747{background-color:#dae8fc;text-align:left;vertical-align:top}
+.tg .tg-kftd{background-color:#efefef;text-align:left;vertical-align:top}
+.tg .tg-ltxa{background-color:#ffccc9;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-kftd" colspan="3"><span style="color:#333;background-color:#FFF">Title spanning whole width of table</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-w747" rowspan="3">Nav 1<br>Nav 2<br>Nav 3<br>Nav 4</td>
+    <td class="tg-ltxa">Banner Ad</td>
+    <td class="tg-w747" rowspan="3">Right Nav 1<br>Right Nav 2<br>Right Nav 3</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">Main content area with lots of text and stories filling the center part of the window</td>
+  </tr>
+  <tr>
+  </tr>
+</tbody>
+</table>
+Added hidden skip Link to get to main content
+
+]
+
+---
+# Swipe order? (best)
+
+.right-column60[
+| Cell         | Nefarious | Well designed | Chunked |
+|--------------|-----------|---------------|---------|
+| Title        | 1         | 1             | 1       |
+| [skip cell]  |           | 2             | 2       |
+| Left Nav     |           |               | 3       |
+| Navigation 1 | 3         | 3             | 3.1     |
+| Navigation 2 | 4         | 4             | 3.2     |
+| Navigation 3 | 5         | 5             | 3.3     |
+| Navigation 4 | 6         | 6             | 3.4     |
+| Right Nav    |           |               | 4       |
+| Right Nav 1  | 7         | 7             | 4.1     |
+| Right Nav 2  | 8         | 8             | 4.2     |
+| Right Nav 3  | 9         | 9            | 4.3     |
+| Banner ad    | 2         | 10            | 5       |
+| Content      | 10        | 11             | 6       |
+
+
+]
+.left-column40[
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-w747{background-color:#dae8fc;text-align:left;vertical-align:top}
+.tg .tg-kftd{background-color:#efefef;text-align:left;vertical-align:top}
+.tg .tg-ltxa{background-color:#ffccc9;text-align:left;vertical-align:top}
+.tg .tg-0lax{text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-kftd" colspan="3"><span style="color:#333;background-color:#FFF">Title spanning whole width of table</span></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-w747" rowspan="3">Nav 1<br>Nav 2<br>Nav 3<br>Nav 4</td>
+    <td class="tg-ltxa">Banner Ad</td>
+    <td class="tg-w747" rowspan="3">Right Nav 1<br>Right Nav 2<br>Right Nav 3</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax" rowspan="2">Main content area with lots of text and stories filling the center part of the window</td>
+  </tr>
+  <tr>
+  </tr>
+</tbody>
+</table>
+Use chunks to group meaningful info and reduce number of navigation steps. 
+
+]
+???
+- User can double tap to drill down into chunk (e.g. navigate to the “like” button by drilling down into an individual post).
+
+
+---
+# More Navigation Implementation Concepts
+
+Forms and inputs have issues with *order* and *labels*. This is fixed different ways on different platforms, but all major UI dev tools have APIs for accessibility. Make sure you use them *and* test.
+- Web [advice](http://webaim.org/techniques/forms/controls) and [advanced advice](http://webaim.org/techniques/forms/advanced) on this. Look for similar documentation for android/iOS.
+
+Tables are not ideal, but *best* when headers are labeled. Again, check the API for your interface dev platform.
+
+---
+# What should a button do? (2/4)
+Minimum needed for screen reader access
+- Location (for Navigation)
+- **Does it have proper labeling/ALT text?**
+
+???
+
+---
+# Interactive Component ALT text
+
+- What is a good name for a "Like" Button?
+
+- Enable the user to understand the name of the control they have navigated to, what type of control it is, what value it has, what state it has.
+
+---
+# Proper ALT text
+
+Screen reader will read out name, role, and state. Don't repeat these.
+
+Good alt text: Name ("Like")
+
+API knows: Role ("Button")
+
+API knows: State ("Not selected")
+
+---
+# What should a  button do? (3/4)
+
+Minimum needed for screen reader access
+- Location (for Navigation)
+- Does it have proper labeling/ALT text?
+- **Can it be triggered through the keyboard or API?**
+
+???
+
+---
+# How do we specify behavior *to a screenreader*?
+
+Component conforms to expectations of accessibility API
+- If it's from an *accessible* library, a proper callback will conform
+- You still need to explicitly announce changes
+- Otherwise you need to look up the accessibility API
+
+---
+# Screen Reader Information Flow for Behavior
+What happens when the user double taps to invoke?
+
+<DIV class="mermaid">
+graph LR
+SR[fa:fa-volume-up <BR> Screenreader<BR>]:::bluelarge -->|Invokes object| API(fa:fa-codepen<BR> Accessibility API<BR>):::bluelarge
+API -->|Passes along request| ATK[<BR> Toolkit/<BR>Browser]:::bluelarge
+ATK -->|Invokes Callback| App[fa:fa-mobile <BR>App<BR>]:::bluelarge
+App -->|Updates Interface<BR>Announces Changes| ATK
+ATK -->|Passes along information| API
+API -->|Deleted text| SR
+Speak(fa:fa-volume-up Deleted Text ):::bluelarge
+
+</div>
+
+---
+# What should a button do? (3/4)
+
+Minimum needed for screen reader access
+- Location (for Navigation)
+- Does it have proper labeling/ALT text?
+- Can it be triggered through the keyboard or API?
+- Did you use a library element or ensure that **events are properly announced**
+  - State changes
+  - Invocation
+
+???
+
+---
+.column[
+
+![:img A picture of a failed sign in to the University of Washington showing text at the top saying "Your sign-in failed. Please try again" without an explanation of what went wrong ,90%, width](img/assessment/signin-fail.png) 
+]
+
+.column[
+## Announce UI changes
+
+If you can't see the UI, you have no idea if login succeeded 
+
+Requires *programmatically* calling an API to announce the change
+
+]
+
+--
+
+.column[
+## Common places this happens 
+
+Dialog boxes
+
+Success notifications
+
+Errors
+]
+
+---
+# QUICK BREAK
+
+Good time to stand and stretch
+---
+# Summary of key web concepts
+
+| Does What? | Web                         |
+|------------|-----------------------------|
+| Content    | HTML/CSS/JS                 |
+| Style      | CSS                         |
+| Structure  | Document Object Model (DOM) |
+| Content    | DIVS                        |
+| Behavior   | Event Handling         |
+
+---
+# Web and Apps use similar concepts
+
+| Does What? | Web                | Apps                |
+|------------|--------------------|---------------------|
+| Content    | HTML/CSS/JS        | XML/Strings         |
+| Style      | CSS                | Layout/Parameters   |
+| Structure  | DOM | Component Hierarchy |
+| Content    | DIVS               | Components          |
+| Behavior   | Event Handling     | Event Handling      |
+
+---
+# Impacts accessibility how?
+
+| Does What? | Web            | Apps                | Accessibility |
+|------------|----------------|---------------------|---------------|
+| Content    | HTML/CSS/JS    | XML/Strings         | ?             |
+| Style      | CSS            | Layout/Parameters   | ?             |
+| Structure  | DOM            | Component Hierarchy | ?             |
+| Content    | DIVS           | Components          | ?             |
+| Behavior   | Event Handling | Event Handling      | ?             |
+
+Discuss and [Post]({{site.discussion}}/5521063) which of these impact different areas of POUR
+
+---
+# Impacts accessibility how?
+
+| Does What? | Web            | Apps                | Accessibility (Egs)      |
+|------------|----------------|---------------------|--------------------------|
+| Content    | HTML/CSS/JS    | XML/Strings         | Comprehension            |
+| Style      | CSS            | Layout/Parameters   | Color/Magnification, etc |
+| Structure  | DOM            | Component Hierarchy | Navigation               |
+| Content    | DIVS           | Components          | ALT text                 |
+| Behavior   | Event Handling | Event Handling      | Navigation & Interaction |
+
+
+You always must understand your accessibility API in depth to make an app accessible
+
+---
+# Some errors are also bugs
+
+
+[Ross et al, 2017](https://dl.acm.org/doi/10.1145/3132525.3132547) studied 1000s of android apps. 
+- Erors  came up which aren't in guidelines
+- Either tool specific or straight up UX errors: 
+
+---
+# Errors that are bugs
+
+Manual inspection is the best way to find these 
+
+| | Description| 
+|--|
+|<i class="darklight fa fa-strikethrough fa-2x"></i> | TextView has a content description. This might interfere with a screen reader’s ability to read the content of the text field |
+| <i class="darklight fa fa-angle-double-right fa-2x"></i>   | Overlapping clickable items         |
+|<i class="darklight fa fa-link fa-2x"></i> | URL in link may be invalid |
+
+
+---
+#  Summary of Common Problems
+
+Ross also identify the **most common problems**  in Apps
+ 
+ .left-column50[
+| |Description  | 
+|--|----------------------|
+|<i class="darklight fa fa-times-circle fa-2x"></i> | Missing element label ||
+|<i class="darklight fa fa-retweet fa-2x"></i>  | Item label ends with type, e.g., “Play Button.” TalkBack automatically announces item type, so information is redundant |
+|<i class="darklight fa fa-eye-slash fa-2x"></i>  | UI Change not announced |
+|<i class="darklight fa fa-server fa-2x"></i>  | Navigation lacks hierarchy; or makes no sense |
+
+]
+
+.right-column50[
+| |Description  | 
+|--|----------------------|
+|<i class="darklight fa fa-search-minus fa-2x"></i>  | Item is too small|
+|<i class="greylight fa fa-adjust fa-2x"></i>  | Low contrast in image or icon |
+|<i class="greylight fa fa-quote-left fa-2x"></i>  | Low text contrast between foreground and background |
+|<i class="darklight fa fa-retweet fa-2x"></i>  | Item's role  identical with alt text|
+]
+
+---
+# How do practitioners enact accessibility in practice?
+
+[Accessibility in Software Practice](https://dl.acm.org/doi/pdf/10.1145/3503508)
+
+- 15 interviews 
+- 120+ unique codes
+
+followed up with a survey
+- 44 statements grouped into eight topics on accessibility 
+- Included practitioners’ viewpoints and different software development stages. 
+- 365 survey respondents from 26 countries across five continents 
+
+
+---
+# Who Creates Accessibility?
+
+**Organizations impact accessibility**
+
+ 
+---
+# Organizational & People Challenges 
+
+.quote[Before making any decisions about “Accessibility”: stakeholders (e.g., designers, architects, developers, testers, and clients) in a project should
+reach a consensus on accessibility development and design]
+
+| Challenge                              | Recommendation                                     |
+|----------------------------------------|----------------------------------------------------|
+| Lack of resources                      | Long-term organizational buy-in and budget         |
+| Culture                                | Cooperative Culture                                |
+| Size (too small)                       | Work with customers & teams to prioritize access   |
+| Inadequate expertise & education       | Include accessibility expertise among team members |
+| Lack of QA to go with developer effort | Include accessibility on testing team              |
+
+---
+# Who Creates Accessibility?
+
+Organizations impact accessibility
+
+**Designers have a big role in what is accessible**
+
+
+---
+# How might UX Designers address Accessibility
+
+Include it in design requirements
+
+Provide ALT text for images and buttons
+
+Provide guidance for both nonvisual and visual structure (e.g. proper linear order)
+
+---
+# Who Creates Accessibility?
+
+Organizations impact accessibility
+
+Designs have a big role in what is accessible
+
+**Developers also of course very important**
+- Need to understand the expectations of APIs and accessibility technologies
+- Need to understand screen readers
+
+
+---
+# Process Challenges (technical)
+
+Notice details of WCAG guidelines low on this list!
+
+| Challenge                                 | Recommendation                                       |
+|-------------------------------------------|------------------------------------------------------|
+| Unclear requirements & planning           | Include accessibility at all stages                  |
+| Unclear scope & architecture requirements | Engage with relevant end users                       |
+| Difficulty testing                        | Use appropriate testing suites & integration testing |
+| Lack of complete access practices         | Rigorous refactoring                                 |
+| Inappropriate tools                       | Well-designed documentation    & training            |
+| Domain-dependent issues                   | Appropriate end user engagement and testing          |
+
+---
+# Who Creates Accessibility?
+
+Organizations impact accessibility
+
+Designs have a big role in what is accessible
+
+Developers also of course very important
+
+**These days, a lot of it is created by end users**
+- This means that you have to think about *indirect* impacts on content creation too 
+- i.e. what do you expose to end users in authoring tools
+
+---
+# Key Take Home Message 
+
+IF you take one thing away from this whole discussion, it should be:
+
+*YOU* decide who is disabled with respect to the technology you create
+
+
+---
+
+# Why isn't the World Already Accessible?
+
+Designing for accessibility is hard
+
+Implementing accessibility is hard
+
+Testing accessibility is also hard!
+

@@ -1,0 +1,255 @@
+---
+layout: presentation
+title: Accessible Media
+description: Alt Text and Video Description
+class: middle, center, inverse
+---
+background-image: url(img/people.png)
+
+# Accessible Media:  <BR>
+# ALT Text and 
+# Video Description
+
+{{site.classnum}}, {{site.quarter}}
+
+---
+name: normal
+layout: true
+class:
+
+---
+# Important Reminder
+
+
+.left-column[
+![:qrhere](nil)]
+
+## Make sure zoom is running and recording!!!
+## Check on zoom buddies
+## Make sure captioning is turned on
+
+---
+[//]: # (Outline Slide)
+# Today's goals
+- Go over ALT text rules
+- Describe a video (in-class exercise)
+- Discuss captioning
+
+---
+# Mode shift: ALT text in dynamic systems
+
+- Compare and contrast
+- Accessible ALT text (for "pictures")
+- Accessible, dynamic systems (apps/web pages) and their images
+- Accessible video
+
+
+---
+# Typical (on-phone) screen reader interaction
+
+.left-column[
+![:img screen reader by Sophia Bai from the Noun Project, 100%, width](img/media/screenreader.png)
+]
+.right-column[
+Three core interaction patterns: 
+
+- Swipe to navigate linearly
+- Touch to navigate spatially
+- The first “hit” of an interface element will focus, double tap to select/activate that interface element
+]
+
+???
+Discuss similarities and differences from desktop
+
+---
+# Building for Accessibility
+
+*Role of Designers/Developers is important here*
+- Only they can provide proper ALT text
+- Their choices impact navigation order
+- They need to announce things that change
+- Size and color matter too
+
+---
+.left-column40[
+![:img A picture of Facebook ,80%, width](img/media/facebook1.png) 
+]
+
+.right-column60[
+## Proper ALT text
+
+What is a good name for the "Like" Button?
+
+Enable the user to understand the name of the control they have navigated to, what type of control it is, what value it has, what state it has.
+]
+
+---
+.left-column40[
+![:img A picture of Facebook ,80%, width](img/media/facebook1.png) 
+]
+
+.right-column60[
+## Proper ALT text
+
+Screen reader will read out name, role, and state. Don't repeat these.
+
+Good alt text: Name ("Like")
+
+API knows: Role ("Button")
+
+API knows: State ("Not selected")
+]
+
+---
+# Building for Accessibility
+
+*Role of Developers is important here*
+- Only they can provide proper alt text
+- **Their choices impact navigation order**
+- They need to announce things that change
+- Size and color matter too
+
+---
+# Example: Swipe Order
+.left-column40[
+![:img A picture of Facebook ,80%, width](img/media/facebook1.png) 
+]
+.right-column60[
+What focus order makes sense for the Facebook newsfeed? 
+
+Does this match the actual focus order?
+
+When might you need to	*skip* things? 
+]
+
+---
+## What order do you think will be used 
+
+.left-column40[
+![:img A picture of Facebook ,80%, width](img/media/facebook1.png) 
+]
+.right-column60[
+Use chunks to group meaningful info and reduce number of navigation steps. 
+- User can double tap to drill down into chunk (e.g. navigate to the “like” button by drilling down into an individual post).
+]
+???
+ink over!
+---
+## What order do you think will be used 
+.left-column40[
+![:img A picture of Facebook ,80%, width](img/media/facebook1.png) 
+]
+.right-column40[
+![:img A picture of Facebook ,120%, width](img/media/facebook-actual.png) 
+]
+
+
+---
+# Building for Accessibility
+
+*Role of Developers is important here*
+- Only they can provide proper alt text
+- Their choices impact navigation order
+- **They need to announce things that change**
+- Size and color matter too
+
+---
+# Any UI change should be announced
+.column[
+![:img A picture of a failed sign in to the University of Washington ,90%, width](img/media/signin-fail.png) ]
+.column[
+Entering the wrong login credentials triggered an error message. If you couldn’t see the UI and the error wasn’t announced, you would have no idea if login succeeded or not. 
+
+]
+--
+
+.column[
+## Common places this happens 
+
+Dialog boxes
+
+Success notifications
+
+Errors
+]
+
+
+---
+# Building for Accessibility
+
+*Role of Developers is important here*
+- Only they can provide proper alt text
+- Their choices impact navigation order
+- They need to announce things that change
+- **Size and color matter too**
+
+---
+# Size
+
+Especially hard on mobile devices
+
+.left-column40[
+![:img An arrow vs arrow and label make very different target sizes ,90%, width](img/media/targets.png) 
+]
+
+.right-column60[
+Even if the user misses the Text Label on the screen, they will still be able to trigger the desired action because the touch target is larger than what appears, resulting in less user error.
+
+White space around targets also helps
+
+Minimum on mobile: 48x48
+]
+???
+Solve for one, extend to many
+Trying to hit a small button with one hand while standing on a moving, crowded bus
+
+---
+# Color contrast
+
+Choose colors that provide enough contrast between content and the background so that anyone with low-vision impairments and color deficiencies can perceive the content.
+
+.left-column50[
+WCAG Level AAA requires a contrast ratio of at least
+- .contrast71[7:1 for normal text] 
+- .contrast41[4.5:1 for large text (14t pt bold or larger)] 
+- .badcontrast[Avoid anything else!]
+]
+.right-column50[
+- [Colorzilla](https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp?hl=en) is an excellent tool for extracting the color value from any page element; 
+- WebAIM has a [contrast checker](https://webaim.org/resources/contrastchecker/#:~:text=WCAG%20Level%20AAA%20requires%20a,value%20from%20any%20page%20element)
+]
+
+---
+# Summary and most common errors
+ 
+| |Description  | 
+|--|----------------------|
+|<i class="darklight fa fa-times-circle fa-2x"></i> | Missing element label ||
+|<i class="darklight fa fa-retweet fa-2x"></i>  | Item label ends with type, e.g., “Play Button.” TalkBack automatically announces item type, so information is redundant |
+|<i class="darklight fa fa-eye-slash fa-2x"></i>  | UI Change not announced |
+|<i class="darklight fa fa-server fa-2x"></i>  | Navigation lacks hierarchy; or makes no sense |
+|<i class="darklight fa fa-search-minus fa-2x"></i>  | Item is too small|
+|<i class="greylight fa fa-adjust fa-2x"></i>  | Low contrast in image or icon |
+|<i class="greylight fa fa-quote-left fa-2x"></i>  | Low text contrast between foreground and background |
+
+---
+# Some additional things to watch out for
+
+| |Description  | 
+|--|----------------------|
+|<i class="darklight fa fa-strikethrough fa-2x"></i> | TextView has a content description. This might interfere with a screen reader’s ability to read the content of the text field |
+|<i class="darklight fa fa-retweet fa-2x"></i>  | Item's role  identical with alt text|
+| <i class="darklight fa fa-angle-double-right fa-2x"></i>   | Overlapping clickable items         |
+|<i class="darklight fa fa-link fa-2x"></i> | URL in link may be invalid |
+
+---
+# Mode shift: Video Description
+
+- Compare and contrast
+- Accessible ALT text (for "pictures")
+- Accessible, dynamic systems (apps/web pages) and their images
+- Accessible video
+
+
+---
+# In Class Exercise
