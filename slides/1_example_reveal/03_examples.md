@@ -149,12 +149,11 @@ Then follows the rest
 ```
 
 ---
+## Fragments using markdown
 
-## Fragments
-
-<p class="fragment" data-fragment-index="3">Appears last</p>
-<p class="fragment" data-fragment-index="1">Appears first</p>
-<p class="fragment" data-fragment-index="2">Appears second</p>
+- Appears last <!-- .element: class="fragment" data-fragment-index="3" -->
+- Appears first <!-- .element: class="fragment" data-fragment-index="1" -->
+- Appears second <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 
