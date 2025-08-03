@@ -8,22 +8,7 @@ date: 2025-08-02
 comments: true
 ---
 
-{% if page.load_dir %}
-   {% assign slide_dir = page.load_dir %}
-{% else %}
-   {% assign slide_dir = page.name %}
-{% endif %}
-
-{% for slide_page in site.pages %}
-{% assign slide_page_path = slide_page.url | split:'/' %}
-{% if slide_page_path[1] == "slides" and slide_page_path[2] == slide_dir  %}
-{% if slide_page_path.size == 4 %}
-<section id={{slide_page_path[3]}} data-markdown>
-<textarea data-template>
-{{slide_page.content}}
-</textarea>
-</section>
-
-{% endif %}
-{% endif %}
-{% endfor %}
+# Not required
+- You can put slides right in this file, but you don't have to
+- An alternative is just to have slides in the directory specified in load_dir
+- if load_dir is not specified, and there is a directory that matches this file name, slides will be loaded from there. 
