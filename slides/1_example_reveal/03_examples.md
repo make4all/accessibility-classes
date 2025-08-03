@@ -72,15 +72,11 @@ From [Stux](https://pixabay.com/users/stux-12364/) on [Pixabay](https://pixabay.
 
 ## Math: An Identity of Ramanujan
 
-<div class="fragment">
-  \[ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
+$$ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
   1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
-  {1+\frac{e^{-8\pi}} {1+\ldots} } } } \]
-</div>
+  {1+\frac{e^{-8\pi}} {1+\ldots} } } }$$
 
 ---
-
-<section data-transition="none">
 
 ## Coding
 
@@ -101,9 +97,7 @@ class Config(yaml2pyclass.CodeGenerator):
 
 First do `import`s
 
-</section>
-
-<section data-transition="none">
+---
 
 ## Coding
 
@@ -123,8 +117,6 @@ class Config(yaml2pyclass.CodeGenerator):
 ```
 
 Then follows the rest
-
-</section>
 
 ---
 

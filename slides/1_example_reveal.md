@@ -13,17 +13,12 @@ comments: true
 {% else %}
    {% assign slide_dir = page.name %}
 {% endif %}
-{% assign slide_number = 0 %}
 
 {% for slide_page in site.pages %}
 {% assign slide_page_path = slide_page.url | split:'/' %}
-{% assign slide_name = slide_page_path[3] | split:'_' | last %}
 {% if slide_page_path[1] == "slides" and slide_page_path[2] == slide_dir  %}
 {% if slide_page_path.size == 4 %}
-{% capture slide_id %}
-   {% increment slide_number %}_{{slide_name}}
-{% endcapture %}
-<section id={{slide_id}} data-markdown>
+<section id={{slide_page_path[3]}} data-markdown>
 <textarea data-template>
 {{slide_page.content}}
 </textarea>
