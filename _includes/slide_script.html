@@ -1,0 +1,40 @@
+<script src="{{ site.baseurl }}/assets/revealjs/dist/reveal.js"></script>
+<script src="{{ site.baseurl }}/assets/revealjs/plugin/zoom/zoom.js"></script>
+<script src="{{ site.baseurl }}/assets/revealjs/plugin/notes/notes.js"></script>
+<script src="{{ site.baseurl }}/assets/revealjs/plugin/search/search.js"></script>
+<script src="{{ site.baseurl }}/assets/revealjs/plugin/markdown/markdown.js"></script>
+<script src="{{ site.baseurl }}/assets/revealjs/plugin/highlight/highlight.js"></script>
+<script src="{{ site.baseurl }}/assets/revealjs/plugin/math/math.js"></script>
+
+
+<!-- revealjs init -->
+<script>
+  // Full list of configuration options available here:
+  // https://revealjs.com/config/
+  Reveal.initialize({
+      hash: true,
+      {%if page.transition %}
+          transition: '{{page.transition}}',
+      {% else %}
+          transition: 'slide', // none/fade/slide/convex/concave/zoom
+      {% endif %}
+      math: {
+	  // mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+	  config: 'TeX-AMS_HTML-full',
+	  TeX: {
+              Macros: {
+		  R: '\\mathbb{R}',
+		  set: [ '\\left\\{#1 \\; ; \\; #2\\right\\}', 2 ]
+              }
+	  }
+      },
+      plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath]
+  });
+
+  {% if site.slideNumber.format and site.slideNumber.format != "none" %}
+  // Shows the slide number using default formatting
+  Reveal.configure({ slideNumber: true });
+  Reveal.configure({ slideNumber: '{{ site.slideNumber.format }}' });
+  {% endif %}
+</script>
+<!-- End revealjs init -->
