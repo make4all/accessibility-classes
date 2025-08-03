@@ -169,26 +169,26 @@ Then follows the rest
 ## Stacking on top
 
 <div class="r-stack">
-  <img src="https://placekitten.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
-  <img src="https://placekitten.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
-  <img src="https://placekitten.com/400/400" width="400" height="400" class="fragment fade-in-then-out">
+  <img src="https://placecats.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
+  <img src="https://placecats.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
+  <img src="https://placecats.com/400/400" width="400" height="400" class="fragment fade-in-then-out">
 </div>
 ---
 
 ## Horizontal stacking
 
 <div class="r-hstack">
-  <img src="https://placekitten.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
-  <img src="https://placekitten.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
-  <img src="https://placekitten.com/400/400" width="400" height="400" class="fragment fade-in-then-out">
+  <img src="https://placecats.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
+  <img src="https://placecats.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
+  <img src="https://placecats.com/400/400" width="400" height="400" class="fragment fade-in-then-out">
 </div>
 ---
 
 ## Vertical stacking
 
 <div class="r-vstack">
-  <img src="https://placekitten.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
-  <img src="https://placekitten.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
+  <img src="https://placecats.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
+  <img src="https://placecats.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
 </div>
 ---
 

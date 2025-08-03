@@ -12,23 +12,82 @@
   // Full list of configuration options available here:
   // https://revealjs.com/config/
   Reveal.initialize({
-      hash: true,
+    width: '1200',
+    height: '960',
+    margin: '0.1',
+    minScale: '0.2',
+    maxScale: '1.5',
+    controls: true,
+    controlsTutorial: false,
+    controlsLayout: 'bottom-right',
+    controlsBackArrows: 'faded',
+    progress: true,
+    slideNumber: false,
+    showSlideNumber: 'all',
+    hashOneBasedIndex: false,
+    hash: false,
+    respondToHashChanges: true,
+    history: true,
+    keyboard: true,
+    keyboardCondition: '',
+    disableLayout: false,
+    overview: true,
+    center: true,
+    touch: true,
+    loop: false,
+    rtl: false,
+    navigationMode: 'default',
+    shuffle: false,
+    fragments: true,
+    fragmentInURL: true,
+    embedded: false,
+    help: true,
+    pause: true,
+    showNotes: false,
+    autoPlayMedia: '',
+    preloadIframes: '',
+    autoAnimate: true,
+    autoAnimateMatcher: '',
+    autoAnimateEasing: 'ease',
+    autoAnimateDuration: '1.0',
+    autoAnimateUnmatched: true,
+    autoAnimateStyles: '[ "opacity", "color", "background-color", "padding", "font-size", "line-height", "letter-spacing", "border-width", "border-color", "border-radius", "outline", "outline-offset" ]',
+    autoSlide: false,
+    autoSlideStoppable: true,
+    autoSlideMethod: '',
+    defaultTiming: '',
+    mouseWheel: false,
+    previewLinks: false,
+    postMessage: true,
+    postMessageEvents: false,
+    focusBodyOnPageVisibilityChange: true,
+    transitionSpeed: 'default',
+    backgroundTransition: 'fade',
+    pdfMaxPagesPerSlide: 'Number.POSITIVE_INFINITY',
+    pdfSeparateFragments: true,
+    pdfPageHeightOffset: '-1',
+    viewDistance: '3',
+    mobileViewDistance: '2',
+    display: 'block',
+    hideInactiveCursor: true,
+    hideCursorTime: '5000',
       {%if page.transition %}
           transition: '{{page.transition}}',
       {% else %}
           transition: 'slide', // none/fade/slide/convex/concave/zoom
       {% endif %}
-      math: {
-	  // mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
-	  config: 'TeX-AMS_HTML-full',
-	  TeX: {
-              Macros: {
-		  R: '\\mathbb{R}',
-		  set: [ '\\left\\{#1 \\; ; \\; #2\\right\\}', 2 ]
-              }
+      
+      
+      mathjax3: {
+	  mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+	  tex: {
+	      inlineMath: [ [ '$', '$' ], [ '\\(', '\\)' ]  ]
+	  },
+	  options: {
+	      skipHtmlTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
 	  }
-      },
-      plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath]
+        },
+      plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight, RevealMath.MathJax3]
   });
 
   {% if site.slideNumber.format and site.slideNumber.format != "none" %}

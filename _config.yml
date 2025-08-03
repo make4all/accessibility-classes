@@ -119,7 +119,7 @@ reveal_path: "assets/revealjs/"
 
 reveal:
   transition: "slide" # none/fade/slide/convex/concave/zoom
-  theme: "black" # beige/blood/league/moon/night/serif/simple/sky/solarized/white
+  theme: "white" # black/beige/blood/league/moon/night/serif/simple/sky/solarized/white
   ## The "normal" size of the presentation, aspect ratio will be preserved
   ## when the presentation is scaled to fit different resolutions. Can be
   ## specified using percentage units.
