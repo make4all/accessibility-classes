@@ -5,7 +5,10 @@ layout: reveal
 load_dir: "1_example_reveal"
 author: Test
 date: 2025-08-02 
-comments: true
+nav_exclude: true
+reveal: 
+  comments: true
+  slideNumber: true
 ---
 
 # Not required
