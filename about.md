@@ -1,26 +1,18 @@
 ---
 layout: page
-title: About
+title: Syllabus
 description: >-
     Course policies and information.
 ---
 
-# About
+# Syllabus
 {:.no_toc}
-
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  {: .text-delta }
-
-  1. TOC
-  {:toc}
-</details>
-
 ---
 
 {% for topic in site.syllabus %}
+<details>
+<summary> {{topic.title}}</summary>
 {{ topic }}
+</details>
 {% endfor %}
 

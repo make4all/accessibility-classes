@@ -60,7 +60,11 @@ collections:
   syllabus:
   slides:
     nav_exclude: true
-  ignore:
+  modules_quals:
+    nav_exclude: true
+  modules_ugrad:
+    nav_exclude: true
+  modules_capstone:
     nav_exclude: true
     
 # Default layouts for each collection type

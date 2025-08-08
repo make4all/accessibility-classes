@@ -8,7 +8,7 @@ warning: draft
 {:toc}
 
  {: .week}
-# Week 1: Introduction to Disability & Accessibility & Accessible Documents
+# Week 1: 
 
 {: .topic}
 ## **Wednesday** {% include slide.html title="Introduction to Course" loc="introduction.html" %}

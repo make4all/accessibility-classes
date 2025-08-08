@@ -1,8 +1,8 @@
 ---
-title: Covid
+title: COVID safety
 ---
 
-# How is COVID safety handled in this class?
+# COVID safety
 
 Masking is currently optional, however people in the room include those who are high risk with respect to COVID and people who live with vulnerable family members. Masks offer another layer of protection to further reduce the risk of transmission for all of us, and help to support these individuals. Thus, in this class, wearing a mask indoors when around others is recommended, and I ask that you attend class remotely if you are sick or have potentially been exposed to COVID-19.
 

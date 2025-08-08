@@ -1,10 +1,10 @@
 ---
-title: Accessibility
+title: Accessibility and Inclusivity
 ---
 
-# Is this class Accessible and Inclusive?
+# Accessible and Inclusivity
 
-We hope so! The class is a shared learning environment and it is
+We hope to make this class accessible and inclusive. The class is a shared learning environment and it is
 important to us to make it a welcoming environment for everyone, from
 all backgrounds. We strive to treat everyone in the class with respect and
 understanding.

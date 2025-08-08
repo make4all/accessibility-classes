@@ -2,7 +2,12 @@
 title: About this class
 ---
 
-# Why take this class?
+1. TOC
+{:toc}
+
+---
+
+# About this class
 
 To learn how  computing can enable new solutions to accessibility, including both access to the world and access to computers? Similarly, how can a disability studies perspective guide us in developing empowering and relevant solutions to accessibility problems? This course explores both of those questions through a combination of discussions, reading, and building. In addition, by studying access technology, we can gain valuable insights into the future of all user interface technology.
 
