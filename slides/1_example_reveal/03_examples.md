@@ -52,13 +52,18 @@ The following examples are mostly based on the [revealjs](https://revealjs.com/)
 
 ## Video on slide
 
-<video src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" data-autoplay></video>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/V0otZkH4VuM?si=0WM7OEDfIfUevdxz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<span class="media-title-hidden">Youtube Video: PAGANINI: 24 Caprices (complete) Antal Zalai, violin 🎵 classical music</span>
+</iframe>
 
 ---
 
 ## Image on slide
 
-<img src="images/blackboard.jpg" data-autoplay>
+<figure aria-labelledby="blackboard">
+<img src="1_example_reveal/images/blackboard.jpg" data-autoplay alt="a photo of a blackboard (a black rectangle with chalk marks on it)">
+<figcaption class="media-title-hidden" id="blackboard">A photo of a blackboard</figcaption>
+</figure>
 
 From [Stux](https://pixabay.com/users/stux-12364/) on [Pixabay](https://pixabay.com/photos/black-board-chalk-traces-school-1072366/), but image is stored locally.
 
@@ -72,13 +77,17 @@ From [Stux](https://pixabay.com/users/stux-12364/) on [Pixabay](https://pixabay.
 
 ## Math: An Identity of Ramanujan
 
+<figure>
 $$ \frac{1}{\Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{\frac25 \pi}} =
   1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {1+\frac{e^{-6\pi}}
   {1+\frac{e^{-8\pi}} {1+\ldots} } } }$$
+</figure>
 
 ---
 
 ## Coding
+
+<figure aria-labelledby="code1">
 
 ```python[1-2]
 import dataclasses
@@ -95,11 +104,16 @@ class Config(yaml2pyclass.CodeGenerator):
     path_output: str
 ```
 
+<figcaption id="code1">Example code listing</figcaption>
+</figure>
+
 First do `import`s
 
 ---
 
 ## Coding
+
+<figure aria-labelledby="code2">
 
 ```python[4-12]
 import dataclasses
@@ -116,11 +130,16 @@ class Config(yaml2pyclass.CodeGenerator):
     path_output: str
 ```
 
+<figcaption id="code2">Another example code listing</figcaption>
+</figure>
+
 Then follows the rest
 
 ---
 
 ## Coding large
+
+<figure aria-labelledby="scrollcode">
 
 ```html[3-5|18-20]
 <table>
@@ -148,6 +167,10 @@ Then follows the rest
 
 ```
 
+<figcaption id="scrollcode">Scrollable code listing</figcaption>
+</figure>
+
+
 ---
 ## Fragments using markdown
 
@@ -160,27 +183,37 @@ Then follows the rest
 ## Stacking on top
 
 <div class="r-stack">
-  <img src="https://placecats.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
+<figure role="group" aria-labelledby="stack">
+  <img crossorigin="anonymous" src="https://placecats.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
   <img src="https://placecats.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
   <img src="https://placecats.com/400/400" width="400" height="400" class="fragment fade-in-then-out">
+<figcaption id="stack">Overlapping Images</figcaption>
+</figure>
 </div>
 ---
 
 ## Horizontal stacking
 
+<figure role="group" aria-labelledby="hstack">
 <div class="r-hstack">
   <img src="https://placecats.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
   <img src="https://placecats.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
   <img src="https://placecats.com/400/400" width="400" height="400" class="fragment fade-in-then-out">
+<figcaption id="hstack">Horizontal Overlapping Images</figcaption>
+</figure>
 </div>
 ---
 
 ## Vertical stacking
 
+<figure role="group" aria-labelledby="vstack">
 <div class="r-vstack">
   <img src="https://placecats.com/450/300" width="450" height="300" class="fragment fade-in-then-out">
   <img src="https://placecats.com/300/450" width="300" height="450" class="fragment fade-in-then-out">
 </div>
+<figcaption id="vstack">Vertical Overlapping Images</figcaption>
+</figure>
+
 ---
 
 <!-- .slide: data-transition="zoom"-->
