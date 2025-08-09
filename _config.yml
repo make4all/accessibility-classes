@@ -16,12 +16,12 @@ discussion: https://edstem.org/us/courses/67367/discussion
 canvas: https://canvas.uw.edu/courses/1746643
 submit: https://canvas.uw.edu/courses/1746643/assignments/
 outcomes: https://canvas.uw.edu/courses/1746643/outcomes/
-closed:
-warning:
 room: BLD ###
 classtime: DDD TT:tt-TT:tt AM|PM
 classnum: CSEXXX
 quarter: "Quarter YYYY"
+closed:
+warning:
 copydate: "7/4/24"
 exclude: [
 	 "Gemfile",
@@ -140,7 +140,6 @@ font-awesome:
 # Custom vars
 version:             1.1.0
 
-markdown_slide_separator: ---
 permalink: "/:title"
 slideNumber:
   # Slide number formatting can be configured using these variables:
@@ -170,6 +169,7 @@ reveal:
   ## Add the current slide number to the URL hash so that reloading the
   ## page/copying the URL will return you to the same slide (true | _false_)
   hash: true ## must be true or fragments break
+  
   ## Push each slide change to the browser history.  Implies `hash: true` (true | _false_)
   ## history: false
 
@@ -184,10 +184,15 @@ reveal:
   ## Disables the default revealjs slide layout (scaling and centering)
   ## so that you can use custom CSS layout (true | _false_)
   ## disableLayout: false
+  ## disables just centering
+  center: false
+
 
   ## The maximum number of pages a single slide can expand onto when printing
   ## to PDF, unlimited by default (Number.POSITIVE_INFINITY)
   ## pdfMaxPagesPerSlide: 100
 
-  
+  markdown: 
+     smartypants: true
+
 

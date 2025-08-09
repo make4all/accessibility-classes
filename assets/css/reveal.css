@@ -13,3 +13,13 @@
       border: 0;
       white-space: nowrap;
     }
+
+.r-hstack {
+  gap: 16px;
+}
+
+.reveal .red-text {
+    color: red !important;
+}
+
+

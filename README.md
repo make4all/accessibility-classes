@@ -41,3 +41,17 @@ Just the Class requires no special Jekyll plugins and can run on GitHub Pages' s
 Just the Class does not work with custom plugins
 
 If you have any trouble installing Ruby or Jekyll on a Mac, there are great resources at [Ruby on Mac](https://www.rubyonmac.dev/blog/)
+
+# Todos
+
+Consider adding to Reveal: 
+- [Railroad](https://github.com/edc4it/reveal.js-railroad); 
+- [Onetimer](https://github.com/tpoindex/reveal-onetimer) for fragments 
+- [Questions](https://github.com/rajgoel/reveal.js-plugins/tree/master/questions)
+- [Poll](https://github.com/rajgoel/reveal.js-plugins/tree/master/poll)
+- [Seminar](https://github.com/rajgoel/reveal.js-plugins/tree/master/seminar); 
+- [Fullscreen](https://github.com/rajgoel/reveal.js-plugins/tree/master/fullscreen)
+- [Chalkboard](https://github.com/rajgoel/reveal.js-plugins/tree/master/chalkboard)
+- [Anything](https://github.com/rajgoel/reveal.js-plugins/tree/master/anything)
+
+Consider adding support for generating things using pandoc and so on in cli e.g. [this reveal advice](https://gist.github.com/jonashackt/85f9df62986db4e70396e3c494e26b76) or what's [recommended here](https://sfarrens.github.io/presentations/#/) about scientific computing
