@@ -2,6 +2,11 @@
 <html>
 <head>
   {% include slide_head.html %}
+  {% if site.reveal.text-align == "left" or page.reveal.text-align == "left" %}
+  <style type="text/css">
+    p { text-align: left; }
+  </style>
+  {% endif %}
 </head>
 <body>
   <div class="reveal">
@@ -10,6 +15,7 @@
 <div class="slides" aria-live="assertive">
   {% assign blankcheck = page.content | split: ' ' %}
   {% if blankcheck.size == 0 %}
+    <!-- .slide: data-background="people.png" -->
     <section id={{page.title}} data-markdown>
       <textarea data-template>
 	# {{page.title}}
@@ -18,13 +24,25 @@
 	{{page.date}}
     </textarea>
     </section>
-  {% else %}
-  <!-- Display page content if it's not blank -->
     <section id={{page.title}} data-markdown>
       <textarea data-template>
-	not blank{{ page.content }}really not blank
-      </textarea>
+	# Important Reminder
+	
+	<a href="?print-pdf&showNotes=true"><img src="https://api.qrserver.com/v1/create-qr-code/?data={{page.url}}&amp;size=100x100" alt="https://api.qrserver.com/v1/create-qr-code/?data={{page.url}}&amp;size=100x100" title="" /><br>Print View: {{page.url}}?print-pdf</a><BR>
+	<a href="{{page.url}}">Live View: {{page.url}}</a>
+	
+	- Make sure zoom is running and recording!!!
+	- Check on zoom buddies
+	- Make sure captioning is turned on
+
+    </textarea>
     </section>
+  {% else %}
+    <!-- Display page content if it's not blank -->
+    <section id={{page.title}} data-markdown>
+      <textarea data-template>
+	{{ page.content }}
+      </textarea>    </section>
   {% endif %}
 
 {% if page.load_dir %}
@@ -39,7 +57,7 @@
        {% if slide_page_path.size == 4 %}
          <section id={{slide_page_path[3]}} data-markdown>
 	   <textarea data-template>
-	     {{slide_page.content}}
+	       {{slide_page.content}}
 	   </textarea>
 	 </section>
        {% endif %}
@@ -48,7 +66,9 @@
 
   </div>
 </div>
-{% include slide_script.html %}
+  {% include slide_script.html %}
+
+  
 </body>
 </html>
 

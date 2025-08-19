@@ -77,6 +77,7 @@ collections:
      search_exclude: true
      nav_exclude: true
   syllabus:
+     nav_exclude: true
   slides:
     nav_exclude: true
   modules_quals:
@@ -159,8 +160,8 @@ reveal:
   ## The "normal" size of the presentation, aspect ratio will be preserved
   ## when the presentation is scaled to fit different resolutions. Can be
   ## specified using percentage units.
-  width: 1200
-  height: 960
+  width: 768
+  height: 560
   ## Factor of the display size that should remain empty around the content
   margin: 0.1
   ## Bounds for smallest/largest possible scale to apply to content
@@ -187,6 +188,25 @@ reveal:
   ## disables just centering
   center: false
 
+  mermaid:
+    theme: dark
+
+  incremental: false
+  preview-links: auto
+  slide-tone: false
+  progress: true
+  history: false
+  chalkboard:
+    buttons: false
+    theme: whiteboard
+  multiplex: false
+  ## none/fade/slide/convex/concave/zoom
+  transition: "none"	
+  title-slide-attributes:
+    data-background-image: "/assets/images/people.png"
+    data-background-position: right
+    data-background-size: contain
+    data-background-opacity: "0.5"
 
   ## The maximum number of pages a single slide can expand onto when printing
   ## to PDF, unlimited by default (Number.POSITIVE_INFINITY)

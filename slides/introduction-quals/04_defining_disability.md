@@ -2,7 +2,7 @@
 ![What is disability? Text is surrounded by diverse people](images/what-is-disability.png)<!-- .element: class="h-stretch"  -->
 
 ---
-## Disability is a context-dependent mismatch <!-- .element: class="r-fit-text"  -->
+## Disability is a context-dependent mismatch 
 
 <div class="r-hstack">
 <div class="fragment">
@@ -40,11 +40,11 @@ More recent views (2000s). This **social model** asking how do we *fix society*
 - Postmodern--Disability doesn't need to be fixed. Disability is celebrated as part of human variation. Disability pride, disability culture, and disabled joy are all things to support and celebrate. <!-- .element: class="fragment"  -->
 
 ---
-# Worldwide Stats
+## Worldwide Stats
 
 | Visual | Hearing | Neurodiversity | Speech | Mobility | Mental Health |
 |--|--|--|--|--|--|
-| ![:img Head shot of ray Charles in front of a microphone,100%,width](img/intro/raycharles.jpeg) | ![:img Head shot of Marlee Matlin signing,100%,width](img/intro/matlin.jpeg) | ![:img Head shot of Temple Grandin out in nature with her red tie blowing in the wind,80%,width](img/intro/grandin.jpeg)  | ![:img Picture of President Biden hugging Brayden Harrington-the 13 year old boy with whom he bonded over stuttering,100%,width](img/intro/biden.jpg)      | ![:img Picture of Ali Stroker; the first disabled woman to win a Tony Award; accepting her award, 100%, width](img/intro/stroker.jpeg)      | ![:img Picture of Catherine Zeta-Jones, 100%, width](img/intro/zeta-jones.jpeg) |
+| ![Head shot of ray Charles in front of a microphone](images/raycharles.jpeg) | ![Head shot of Marlee Matlin signing](images/matlin.jpeg) | ![Head shot of Temple Grandin out in nature with her red tie blowing in the wind](images/grandin.jpeg)  | ![Picture of President Biden hugging Brayden Harrington-the 13 year old boy with whom he bonded over stuttering](images/biden.jpg)      | ![Picture of Ali Stroker; the first disabled woman to win a Tony Award; accepting her award](images/stroker.jpeg)      | ![:Picture of Catherine Zeta-Jones](images/zeta-jones.jpeg) |
 | Ray Charles  | Marlee Matlin | Temple Grandin | President Biden | Ali Stroker | Catherine Zeta-Jones|
 | *Colorblind*<BR>*Visual Impairment*<BR>*Blind* | *Hearing loss* <BR> *Deaf* | *Dyslexia* <BR> *Autism* <BR> *PTSD* | *Stutter* <BR> *Nonspeaking* <BR> *Dyspraxia* | *Quadriplegia* <BR> *Limb different* | *Bipolar*<BR>*Anxiety*<BR>*PTSD*<BR>*Depression*  |
 
@@ -57,7 +57,7 @@ call out that you don't have to be famous to be proud of being disabled
 call out multiple disabilities
 
 ---
-# Rates of Disability are increasing
+## Rates of Disability are increasing
 
 Rates of disability are increasing
 - Aging population

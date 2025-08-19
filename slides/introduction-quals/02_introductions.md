@@ -1,5 +1,6 @@
 <!-- .slide: data-background="#003333" -->
 # Introductions
+
 ---
 ## Jennifer Mankoff
 
@@ -13,12 +14,12 @@ and accessibility of our digital future.
 ## Lucille... TBD
 
 ---
-# Warm up
+## Warm up
 
 <iframe src="https://embed.polleverywhere.com/free_text_polls/NTxtnIG1B8z48hRHmfpLy?controls=none&short_poll=true" class="r-stretch"></iframe>
 
 ---
-# Introduce yourselves
+## Introduce yourselves
 
 Discuss with at least two neighbors: 
 

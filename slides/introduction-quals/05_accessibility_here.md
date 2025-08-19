@@ -1,5 +1,6 @@
 <!-- .slide: data-background="#003333" -->
-# Class Access Norms & Syllabus <!-- .element: class="r-fit-text"  -->
+# Class Access Norms & Syllabus
+
 ---
 ##  How is this class accessible? (1/3)
 
@@ -13,16 +14,14 @@ Many disabilities benefit from flexibility in how time is spent
 for any reason, talk to us and consider working with
 [DRS](https://depts.washington.edu/uwdrs/) as well.
 
---
-
-In our class, this means that where possible, we provide those as a standard part of the class. To that end...
+Where possible, we provide those as a standard part of the class. To that end...
 
 ---
 
 <iframe src="https://embed.polleverywhere.com/discourses/C4L35nDT4JXLiKzESi8s2?controls=none&short_poll=true" width="800px" height="600px"></iframe>
 
 ---
-# Small Group Discussion
+## Small Group Discussion
 
 How would you implement this in your lab or workplace? (post on our [Discussion Board]({{site.discussion}}))
 
