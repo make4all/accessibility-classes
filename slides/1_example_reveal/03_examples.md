@@ -5,8 +5,8 @@
 What can this stuff do? <!-- .element: class="r-fit-text" -->
 
 ---
-
-The following examples are mostly based on the [revealjs](https://revealjs.com/) examples on [Github](https://github.com/hakimel/reveal.js/tree/master/examples) and adjusted to use mainly Markdown only.
+The following examples are mostly based on the [revealjs](https://revealjs.com/) examples on [Github](https://github.com/hakimel/reveal.js/tree/master/examples) and adjusted to use mainly Markdown only. 
+<!-- .element: class="text-align-left" -->
 
 ---
 

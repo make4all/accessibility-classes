@@ -4,8 +4,6 @@
 Read up on some of these links when you are faced with specific description needs 
 
 - [Decorative and branding](https://dl.acm.org/doi/pdf/10.1145/3308558.3313605) 
-- Formatting and text styling
-- Images as links
 - [Diagrams](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9028522&casa_token=zZw_rYBgu1AAAAAA:eozpbJ-vvMZjQNt8p6WU91X4uFumPs-yVuMn4PTPRjyMhtsVrprdIEe1JfYOCUdv8SFP_TGd9s965Q&tag=1); [Visualizations](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9555469)
 - [Memes](https://dl.acm.org/doi/10.1145/3308561.3353792)
 - [GUIS](https://dl.acm.org/doi/10.1145/3411764.3445040)
@@ -26,6 +24,8 @@ Read up on some of these links when you are faced with specific description need
 ![Vector graphic of maple leaf](presenting/images/maple1.png) <!-- .element: width="25%" -->
 ![Red Maple Leaf icon](presenting/images/maple.png) <!-- .element: width="25%" -->
 ![Maple Leaf Icon on a Canadian Flag](presenting/images/canadaflag.png) <!-- .element: width="25%" -->
+
+<!-- .element: width="40%" class="recenter" !important -->
 
 Is this meant to represent a maple leaf? or Canada? How would you describe the differences between these images if all are present? Only one? 
 
@@ -49,7 +49,8 @@ Findings:
 ## Back to the maple leaf
 
 
-![Maple Leaf Icon on a Canadian Flag](presenting/images/canadaflag.png) <!-- .element: width="70%" -->
+![Maple Leaf Icon on a Canadian Flag](presenting/images/canadaflag.png)<!-- .element: width="40%"  -->
+<!-- .element: width="40%" class="recenter" !important -->
 
 
 > A realistic image of a Canadian flag with a red maple leaf on a white background. Shadows and curves suggest it is blowing in the wind. Nothing other than the flag is visible
@@ -63,7 +64,9 @@ Good time to stand and stretch
 ## When to Describe Identity 
 [Bennett et al](https://dl.acm.org/doi/10.1145/3411764.3445498) interviewed BIPOC, Non-Binary and/or Transgender Blind people. 
 
-![:youtube a video describing the results of a study with people with disabilities with intersectional identities about their preferences for how to describe diverse people in image descriptions,By6nzFefcxs]
+<iframe width="560" height="315" src="https://www.youtube.com/embed/By6nzFefcxs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+<span class="media-title-hidden">Youtube Video: a video describing the results of a study with people with disabilities with intersectional identities about their preferences for how to describe diverse people in image descriptions</span>
+</iframe>
 
 
 Note: 
@@ -77,7 +80,7 @@ When is identity important
 ---
 ## How to Describe Identity (1/2)
 
-![:img Lezlie looks at us full front with curls down one size of her head and her long sleeve rolled up just on that side of a cowl neck wild abstract print shirt. Her smiling cheeks greet us., 90%, width](img/presenting/award.jpeg)
+![Lezlie looks at us full front with curls down one size of her head and her long sleeve rolled up just on that side of a cowl neck wild abstract print shirt. Her smiling cheeks greet us](presenting/images/award.jpeg)
 
 - OK to mention race, gender, and disability status in that case
 - Otherwise use appearance (skin color, "person" instead of gender, AT use but not disability status)
@@ -89,7 +92,7 @@ Original announcement: Dr. Lezlie Frye has won [an award] for *her*<!-- .element
 ---
 ## How to Describe Identity (1/2)
 
-![:img Lezlie looks at us full front with curls down one size of her head and her long sleeve rolled up just on that side of a cowl neck wild abstract print shirt. Her smiling cheeks greet us., 90%, width](presenting/images/award.jpeg)
+![ Lezlie looks at us full front with curls down one size of her head and her long sleeve rolled up just on that side of a cowl neck wild abstract print shirt. Her smiling cheeks greet us](presenting/images/award.jpeg)
 
 > Lezlie, a white woman, looks at us full front with curls down one size of her head and her long sleeve rolled up just on that side of a cowl neck wild abstract print shirt. Her smiling cheeks greet us.
 
@@ -97,7 +100,7 @@ Original announcement: Dr. Lezlie Frye has won [an award] for *her*<!-- .element
 ---
 ## ALT Text with Identity Markers?
 
-![:img A Black; disabled; non-binary person with a face mask walks down a neighborhood street with one hand in their pocket and the other hand on their cane. They have a short Mohawk and are wearing a jacket; shorts; tennis shoes; and glasses,100%, width](presenting/images/todescribe.png)
+![:img A Black; disabled; non-binary person with a face mask walks down a neighborhood street with one hand in their pocket and the other hand on their cane. They have a short Mohawk and are wearing a jacket; shorts; tennis shoes; and glasses](presenting/images/todescribe.png)
 
 Think / Pair / [Ed post](tbd)
 
