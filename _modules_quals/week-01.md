@@ -18,5 +18,4 @@ start: Sep 22
 : Introduction to Course
   : [Slides](slides/introduction.html)
 : **Skill Goal**{: .label .label-yellow} Learn how accommodations can make a meeting more inclusive (see slides for In class Exercise and post on our [Discussion Board]({{site.discussion}}))
-: **HW 1 out**{: .label .label-red } <i class="fa-solid fa-house-laptop" aria-hidden="true"/>  [At Around US](assignments/finding-accessibility.html)
   

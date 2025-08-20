@@ -1,5 +1,5 @@
 ---
-title: Accessible Presentations and AT Around Us presentations
+title: Accessible Presentations and Plain Language
 week: Week 2
 start: Sep 29
 ---
@@ -10,29 +10,20 @@ start: Sep 29
    {% assign weekday = weekday | concat: next %}
 {% endfor %}
 
-**Goals**
-: How to create accessible documents
-: How to present accessibly 
-: Introduction to how to use plain language 
-: Discussion of best practices in returning research to the disability community, such as member checking, workshops, and creation of prestige opportunities for community members 
-
 {{weekday[0]}}
-: Presenting Accessibly
-  : [Slides](slides/presenting-accessibly.html)
-: **Skill Goal**{: .label .label-yellow} Describe a person  (see [slides](slides/presenting-accessibly) for in class exercise)
-  : Bring a visual representation of yourself to class
-: Read about [Creating Accessible Figures and Tables (DIS)](https://dis.acm.org/2023/creating-accessible-figures-and-tables/) and try out the [Image ALT Text Tutorial](https://webaim.org/techniques/alttext/)
-: Read ["It's Complicated" (Bennett et al)](https://dl.acm.org/doi/10.1145/3411764.3445498) 
-: *Optional*: Read [Dungeons and Dragons taught me how to write ALT text](https://ericwbailey.website/published/dungeons-and-dragons-taught-me-how-to-write-alt-text/)
-:  <i class="fa-solid fa-house-laptop" aria-hidden="true"/>  Optional: ["Living Disability Theory: Reflections on Access, Research, and Design." (Hofmann, et al)](https://make4all.org/wp-content/uploads/3373625.3416996.pdf)
-: **HW 1 due**{: .label .label-red} <i class="fa-solid fa-house-laptop" aria-hidden="true"/>  [At Around US](assignments/finding-accessibility.html)
+: Accessible design models 
+  : (Student Pair: )
+: **Read**{: .label .label-blue}  [Accessibility in Software Practice: A Practitioner’s Perspective](https://dl.acm.org/doi/abs/10.1145/3503508); [Disability Dongles](https://blog.castac.org/2022/04/disability-dongle/) by Liz Jackson, Alex Haagaard, Rua Williams
+: Optional: [Design, Disability and Knowing the 'Other'](https://dl.acm.org/doi/fullHtml/10.1145/3290605.3300528); ["Living Disability Theory: Reflections on Access, Research, and Design." (Hofmann, et al)](https://make4all.org/wp-content/uploads/3373625.3416996.pdf)
+: **HW 1 assigned**{: .label .label-red} [At Around US](assignments/finding-accessibility.html)
 
 {{weekday[2]}}
-: AT Around Us Presentations
-: Plain Language
-  : [Slides](slides/plain-language.html) - 60 minutes of AT Around Us presentations
-: [Plain language writing](https://www.forbes.com/sites/andrewpulrang/2020/10/22/plain-language-writing---an-essential-part-of-accessibility/)
-: [Plain language](https://pudding.cool/2022/02/plain/)
-: [Disability Dongles](https://blog.castac.org/2022/04/disability-dongle/) by Liz Jackson, Alex Haagaard, Rua Williams
-: **Reading** {: .label .label-purple} Post your response to [reading questions for these readings on Ed](https://edstem.org/us/courses/56844/discussion/4659767) 
-: <i class="fa-solid fa-house-laptop" aria-hidden="true"/>  Optional: [Design, Disability and Knowing the 'Other'](https://dl.acm.org/doi/fullHtml/10.1145/3290605.3300528) 
+: Presenting Accessibly
+  : [Slides](slides/presenting-accessibly.html)
+: **Skill**{: .label .label-yellow} Describe a diagram or image
+: **Read**{: .label .label-blue}  [Creating Accessible Figures and Tables (DIS)](https://dis.acm.org/2023/creating-accessible-figures-and-tables/) 
+: **Read**{: .label .label-blue} the most relevant paper ([Decorative and branding](https://dl.acm.org/doi/fullHtml/10.1145/3308558.3313605); [Diagrams](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9028522&casa_token=zZw_rYBgu1AAAAAA:eozpbJ-vvMZjQNt8p6WU91X4uFumPs-yVuMn4PTPRjyMhtsVrprdIEe1JfYOCUdv8SFP_TGd9s965Q&tag=1); [Visualizations](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9555469); [Memes](https://dl.acm.org/doi/10.1145/3308561.3353792); [GUIS](https://dl.acm.org/doi/fullHtml/10.1145/3411764.3445040); ([AR/VR](https://educatorsinvr.com/2019/05/31/accessibility-disabilities-and-virtual-reality-solutions/)); [Rich Interaction Components](https://dl.acm.org/doi/pdf/10.1145/2851613.2851680?casa_token=dOz4huS0TUkAAAAA:zv0PjZk3-T8Bb4X2SfNpdZFuqO2u9v1jpWn5fq0hKZ0se6t5g0oMKLfrAmhlyufcw_3AuJ-ABZ2yWQ);[CAPTCHAs](https://dl.acm.org/doi/10.1145/1518701.1518983)
+  : Bring a hard to describe scientific diagram to class
+: *Optional*: [Dungeons and Dragons taught me how to write ALT text](https://ericwbailey.website/published/dungeons-and-dragons-taught-me-how-to-write-alt-text/); ["It's Complicated" (Bennett et al)](https://dl.acm.org/doi/10.1145/3411764.3445498)
+
+
