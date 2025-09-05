@@ -11,18 +11,18 @@ baseurl: '/cseXXX/YYqq' # the subpath of your site, e.g. /blog
 url: 'https://courses.cs.washington.edu' # the base hostname & protocol for your site, e.g. http://example.com
 staff_email: uaccess@cs.washington.edu
 canvas_course: 1746643
-git_branch: UACCESS-24fa
-discussion: https://edstem.org/us/courses/67367/discussion
-canvas: https://canvas.uw.edu/courses/1746643
-submit: https://canvas.uw.edu/courses/1746643/assignments/
-outcomes: https://canvas.uw.edu/courses/1746643/outcomes/
+git_branch: NAME-YYqq
+discussion: https://edstem.org/us/courses/xxxx/discussion
+canvas: https://canvas.uw.edu/courses/zzzz
+submit: https://canvas.uw.edu/courses/zzzz/assignments/
+outcomes: https://canvas.uw.edu/courses/zzz/outcomes/
 room: BLD ###
 classtime: DDD TT:tt-TT:tt AM|PM
 classnum: CSEXXX
 quarter: "Quarter YYYY"
 closed:
 warning:
-copydate: "7/4/24"
+copydate: "9/4/25"
 exclude: [
 	 "Gemfile",
 	 "Gemfile.lock",
