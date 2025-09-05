@@ -1,5 +1,5 @@
 ---
-title: Accessible Presentations and Plain Language
+title: Accessible Design; Presentating Accessibly
 week: Week 2
 start: Sep 29
 ---
@@ -13,7 +13,7 @@ start: Sep 29
 {{weekday[0]}}
 : Accessible design models 
   : (Student Pair: )
-: **Read**{: .label .label-blue}  [Accessibility in Software Practice: A Practitioner’s Perspective](https://dl.acm.org/doi/abs/10.1145/3503508); [Disability Dongles](https://blog.castac.org/2022/04/disability-dongle/) by Liz Jackson, Alex Haagaard, Rua Williams
+: **Read**{: .label .label-blue}  [Accessibility in Software Practice: A Practitioner’s Perspective](https://dl.acm.org/doi/abs/10.1145/3503508); [Disability Dongles](https://blog.castac.org/2022/04/disability-dongle/) by Liz Jackson, Alex Haagaard, Rua Williams; [Accessibility people, you go work on that thing of yours over there": Addressing Disability Inclusion in AI Product Organizations](https://arxiv.org/pdf/2508.16607) by S Moharana, CL Bennett, E Buehler et al.
 : Optional: [Design, Disability and Knowing the 'Other'](https://dl.acm.org/doi/fullHtml/10.1145/3290605.3300528); ["Living Disability Theory: Reflections on Access, Research, and Design." (Hofmann, et al)](https://make4all.org/wp-content/uploads/3373625.3416996.pdf)
 : **HW 1 assigned**{: .label .label-red} [At Around US](assignments/finding-accessibility.html)
 

@@ -1,5 +1,5 @@
 ---
-title: Introduction to Disability & Accessibility & Accessible Documents
+title: Introduction to Disability & Accessibility
 week: Week 1
 start: Sep 22
 ---

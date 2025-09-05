@@ -1,5 +1,5 @@
 ---
-title: AT Around us and Design Models
+title: Plain Language & AT Around Us
 week: Week 3
 start: Oct 6
 ---

@@ -1,5 +1,5 @@
 ---
-title: Building Accessible Interfaces
+title: Building Accessible Interfaces ad classes\\\\\\\\\
 week: Week 4
 start: Oct 13
 ---
@@ -20,7 +20,7 @@ start: Oct 13
 : **HW 3 assigned**{: .label .label-red}  [Improve accessibility of a thing](assignments/technology-implementation.html) 
 
 {{weekday[2]}}
-: TBD (maybe automating analysis?)
+: Accessibility & Higher Ed
   : Student Pair
-: **Read**{: .label .label-blue} Accessibility and Grading [Ungrading for access and equity](https://www.insidehighered.com/news/student-success/academic-life/2023/04/11/ungrading-form-access-equality-classroom); Accessibility and Course design: [Creating an accessible cours](https://sds.cornell.edu/resources/faculty-staff/universal-design-instruction); Accessibility Curriculum: [Teach Access on Fundamentals](https://teachaccess.org/wp-content/uploads/2018/03/Teaching-Accessibility-Fundamental-Skills-and-Concepts.pdf)
+: **Read**{: .label .label-blue} Accessibility and Grading [Ungrading for access and equity](https://www.insidehighered.com/news/student-success/academic-life/2023/04/11/ungrading-form-access-equality-classroom); Accessibility and Course design: [Creating an accessible course](https://sds.cornell.edu/resources/faculty-staff/universal-design-instruction); Accessibility Curriculum: [Teach Access on Fundamentals](https://teachaccess.org/wp-content/uploads/2018/03/Teaching-Accessibility-Fundamental-Skills-and-Concepts.pdf)
 : **Optional/perhaps of interest** [RIT research project on teaching accessibility](https://cair.rit.edu/teaching-accessibility/{; [Teaching Accessible Computing Book](https://bookish.press/tac)
